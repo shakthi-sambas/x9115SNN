@@ -8,21 +8,21 @@
 
   a) python --version
   
-  <img src="/imgs/img1.png" width=500>
+  <img src="/imgs/img1.png" height= 350 width=600>
   
   b) pip help
   
-  <img src="/imgs/img2.png" width=500>
+  <img src="/imgs/img2.png" width=600>
   
   c) easy_install -h
   
-  <img src="/imgs/img3.png" width=500>
+  <img src="/imgs/img3.png" width=600>
   
 
 3)A screen shot of what it looks like to write code in your preferred Python IDE 
 
 
-<img src="/imgs/img6.png" width=500>
+<img src="/imgs/img6.png" height = 350 width=600>
 
 
 
