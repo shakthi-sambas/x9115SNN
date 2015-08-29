@@ -1,1 +1,1 @@
-####### this folder contains images to be used through out the semester
+### This folder contains images to be used through out the semester
