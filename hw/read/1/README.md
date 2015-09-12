@@ -32,14 +32,24 @@ The author conducted testing using three different versions of SWAT. Each versio
 
 
 #### II4. Related Work
-
+Although Lots of research happened on Search Basesd software engineering search based test data generation is used for these studies specifically for web applications. The other teams used this approach for Ajax based web applications using Hill climbing Algorithm. Also an other team  introduced an algorithm that uses symbolic execution of the source code to group inputs into interfaces. This approach is for applied to Java applications where as the authors team mainly focus on PHP applications.
 
 
 ## III Areas of Improvement
 
+#### III1.
+The author chooses six different web applications, but appart from their size, he didn't mention how these applications qualified for experimental studies. If they would mention various criterias for selecting the appication might be useful.
 
+#### III2. 
+The tests were conducted on a simple hardware setup and also tested locally. So it is difficult to generalize the testing results. It might be they tested this using medium size cluster and also test setup remote services in a distributed envrionment.
 
+#### III3.
 
+All the applications chosen for the study are PHP applications. To cover major wides area of web applications they could have selected other applications implemented by other languges like Java to see the overall effectivness and efficiency of this approach.
 
 
 ## References
+[1] Automated Web Application Testing Using Search Based Software Engineering
+Nadia Alshahwan and Mark Harman CREST Centre
+University College London
+London, UK
