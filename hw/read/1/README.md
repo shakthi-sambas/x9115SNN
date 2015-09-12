@@ -1,12 +1,24 @@
-# x9115SNN
+# Reading Assignment 1
 
-### CSC 591 Automated Software Engineering
+## I KeyWords
 
 
-#####Collaborators:
 
-Sakthi Sambasivam (ssambas)
 
-Nitin Sharma (nsharm10)
 
-Nakul Shukla (nshukla)
+
+## II Brief Notes
+
+
+
+
+
+
+## III Areas of Improvement
+
+
+
+
+
+
+## References
