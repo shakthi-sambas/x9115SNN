@@ -3,10 +3,10 @@
 ## I KeyWords
 
 #### I1. Hill Climbing
-Hiil climbing is basically a local search algorithm used in SBSE for testing. A random solution is evuluated after that neighbouring solutions of that random solution are evaulated iteratively to find the better solution.
+Hill climbing is basically a local search algorithm used in SBSE for testing. A random solution is evaluated after that neighbouring solutions of that random solution are evaluated iteratively to find the better solution.
 
 #### I2. Near Miss Seeding (NMS)
-During each iteration we collect the input values that are near misses, and create near vector. Using this near values instead of random values for inializing search is called Near Miss Seeding.
+During each iteration we collect the input values that are near misses, and create near vector. Using this near values instead of random values for initializing search is called Near Miss Seeding.
 
 #### I3. Static Constant Seeding
 
@@ -32,7 +32,7 @@ The author conducted testing using three different versions of SWAT. Each versio
 
 
 #### II4. Related Work
-Although there is lots of research made in Search based software engineering, Search based test data generation is used for these studies specifically for web applications. The other teams used this approach for Ajax based web applications using Hill climbing Algorithm. Also the other team  introduced an algorithm that uses symbolic execution of the source code to group inputs into interfaces. This approach is for applied to Java applications where as the authors team's mainl focus is on PHP applications.
+Although there is lots of research made in Search based software engineering, Search based test data generation used for these studies is specifically for web applications. The other teams used this approach for Ajax based web applications using Hill climbing Algorithm. Another team introduced an algorithm that uses symbolic execution of the source code to group inputs into interfaces. This approach is for applied to Java applications where as the authors team's mainl focus is on PHP applications.
 
 
 ## III Areas of Improvement
@@ -45,7 +45,7 @@ The tests were conducted on a simple hardware setup and also tested locally. So 
 
 #### III3.
 
-All the applications chosen for the study are PHP applications. To cover major wides area of web applications they could have selected other applications implemented by other languges like Java to see the overall effectivness and efficiency of this approach.
+All the applications chosen for the study are PHP applications. To cover major wides area of web applications they could have selected other applications implemented by other languages like Java to see the overall effectivness and efficiency of this approach.
 
 
 ## References
