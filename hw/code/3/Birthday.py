@@ -26,6 +26,8 @@ def has_duplicates(inpt):
             return True
     return False
 
+# This part contains solution to part 2 which utilizes function from part 1
+
 def rand_bday_generate(num_of_samples):
     bday = []
     for counter in range (num_of_samples):
@@ -44,10 +46,8 @@ def birthday_paradox():
     return counter
 
 count = birthday_paradox()
-print ("Num of matches = %d",count)
-print ('Chance = %d%', (count*100/5000))
+print "Number of runs = 5000"
+print "Number of students per run = 23"
+print "Number of runs with atleast 1 match = %d" % count
+print 'Chance (number of runs with matches/5000) = %d percent' % (count*100/5000)
 
-
-# print 'After %d simulations' % num_simulations
-# print 'with %d students' % num_students
-# print 'there were %d simulations with at least one match' % count
