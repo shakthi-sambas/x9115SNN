@@ -49,5 +49,5 @@ count = birthday_paradox()
 print "Number of runs = 5000"
 print "Number of students per run = 23"
 print "Number of runs with atleast 1 match = %d" % count
-print 'Chance (number of runs with matches/5000) = %d percent' % (count*100/5000)
+print 'Chance (number of runs with matches/5000) = %s percent' % (float(count)*100.0/5000.0)
 
