@@ -137,7 +137,7 @@ class PokerHand(Hand):
                 return hand_probability_order[i]
         return "No Hand"
         
-def shuffle_divide_classify_count(num_hands):
+def shuffle_divide_classify_count(num_hands, cards_per_player):
     
     num_straight_flush = 0
     num_four_a_kind = 0
@@ -151,77 +151,92 @@ def shuffle_divide_classify_count(num_hands):
     for hand in range(num_hands):
         deck = Deck()
         deck.shuffle()
+        deck.shuffle()
     
         # deal the cards and classify the hands
         # for i in range(2):
         hand = PokerHand()
-        deck.move_cards(hand, 7)
+        deck.move_cards(hand, cards_per_player)
         hand.sort()
-        print hand
+        # print hand
         flush = hand.has_flush()
         if flush:
             num_flush = num_flush+1
-        print 'Has Flush: %s' % flush
+        # print 'Has Flush: %s' % flush
         pair =  hand.has_pair()
         if pair:
             num_pair = num_pair+1
-        print 'Has One Pair: %s' % pair
+        # print 'Has One Pair: %s' % pair
         two_pair = hand.has_twopair()
         if two_pair:
             num_two_pair = num_two_pair+1
-        print 'Has Two Pairs: %s' % two_pair
+        # print 'Has Two Pairs: %s' % two_pair
         three_of_a_kind = hand.has_threeofakind()
         if three_of_a_kind:
             num_three_a_kind = num_three_a_kind + 1
-        print 'Has Three of a Kind: %s' % three_of_a_kind
+        # print 'Has Three of a Kind: %s' % three_of_a_kind
         four_of_a_kind = hand.has_fourofakind()
         if four_of_a_kind:
             num_four_a_kind = num_four_a_kind+1
-        print 'Has Four of a Kind: %s' % four_of_a_kind
+        # print 'Has Four of a Kind: %s' % four_of_a_kind
         full_house = hand.has_fullhouse()
         if full_house:
             num_full_house = num_full_house+1
-        print 'Has Full House: %s' % full_house
+        # print 'Has Full House: %s' % full_house
         straight = hand.has_straight()
         if straight:
             num_straight = num_straight+1
-        print 'Has Straight: %s' % straight
+        # print 'Has Straight: %s' % straight
         straight_flush = hand.has_straightflush()
         if straight_flush:
             num_straight_flush = num_straight_flush+1
-        print 'Has Straight Flush: %s' % straight_flush
+        # print 'Has Straight Flush: %s' % straight_flush
         result_list = [straight_flush, four_of_a_kind, full_house, flush, straight, three_of_a_kind, two_pair, pair]
         hand.classify(result_list)
-        print "Best hand: %s" % hand.label
-        print ''
+        # if hand.label:
+        #     print "Best hand: %s" % hand.label
+        # else:
+        #     print "Best hand: None"
+        # print ''
     return [num_pair, num_two_pair, num_three_a_kind, num_straight, num_flush, num_full_house, num_four_a_kind, num_straight_flush]
 
 
 def display_classification_numbers(num_hands_shuffled, classification_list):
     print "Number of Hands shuffled: %s" % num_hands_shuffled
-    print "Number of Pairs: %s" % classification_list[0]
-    print "Number of Two Pairs: %s" % classification_list[1]
-    print "Number of Three of a Kind: %s" % classification_list[2]
-    print "Number of Straight: %s" % classification_list[3]
-    print "Number of Flush: %s" % classification_list[4]
-    print "Number of Full House: %s" % classification_list[5]
-    print "Number of Four of a Kind: %s" % classification_list[6]
-    print "Number of Straight Flush: %s" % classification_list[7]
-    
+    print "Number of Pairs: %s   Probability (42.26): %s" % (classification_list[0], float(classification_list[0]) / num_hands_shuffled)
+    print "Number of Two Pairs: %s   Probability (4.75): %s" % (classification_list[1], float(classification_list[1]) / num_hands_shuffled)
+    print "Number of Three of a Kind: %s   Probability (2.11): %s" % (classification_list[2], float(classification_list[2]) / num_hands_shuffled)
+    print "Number of Straight: %s   Probability (0.39): %s" % (classification_list[3], float(classification_list[3]) / num_hands_shuffled)
+    print "Number of Flush: %s   Probability (0.196): %s" % (classification_list[4], float(classification_list[4]) / num_hands_shuffled)
+    print "Number of Full House: %s   Probability (0.1441): %s" % (classification_list[5], float(classification_list[5]) / num_hands_shuffled)
+    print "Number of Four of a Kind: %s   Probability (0.024): %s" % (classification_list[6], float(classification_list[6]) / num_hands_shuffled)
+    print "Number of Straight Flush: %s   Probability (0.0015): %s" % (classification_list[7], float(classification_list[7]) / num_hands_shuffled)
     print ""
-    print "PROBABILITY: "
-    print "Pairs: %s compared to 42.26" % (float(classification_list[0]) / num_hands_shuffled)
-    print "Two Pairs: %s compared to 4.75" % (float(classification_list[1]) / num_hands_shuffled)
-    print "Three of a Kind: %s compared to 2.11" % (float(classification_list[2]) / num_hands_shuffled)
-    print "Straight: %s compared to 0.39" % (float(classification_list[3])/ num_hands_shuffled)
-    print "Flush: %s compared to 0.196" % (float(classification_list[4]) / num_hands_shuffled)
-    print "Full House: %s compared to 0.1441" % (float(classification_list[5]) / num_hands_shuffled)
-    print "Four of a Kind: %s compared to 0.024" % (float(classification_list[6]) / num_hands_shuffled)
-    print "Straight Flush: %s compared to 0.0015 " % (float(classification_list[7]) / num_hands_shuffled)
-    
      
 if __name__ == '__main__':
     # make a deck
-    num_hands_shuffled = 1000000
-    classification_list = shuffle_divide_classify_count(num_hands_shuffled)
-    display_classification_numbers(num_hands_shuffled, classification_list)
+    num_hands_shuffled_100 = 100
+    num_hands_shuffled_1000= 1000
+    num_hands_shuffled_10000= 10000
+    
+    print "For 5 cards per player: " 
+    
+    classification_list_100_5 = shuffle_divide_classify_count(num_hands_shuffled_100, 5)
+    display_classification_numbers(num_hands_shuffled_100, classification_list_100_5)
+    
+    classification_list_1000_5 = shuffle_divide_classify_count(num_hands_shuffled_1000, 5)
+    display_classification_numbers(num_hands_shuffled_1000, classification_list_1000_5)
+    
+    classification_list_10000_5 = shuffle_divide_classify_count(num_hands_shuffled_10000, 5)
+    display_classification_numbers(num_hands_shuffled_10000, classification_list_10000_5)
+    
+    print "For 7 cards per player: "
+    
+    classification_list_100_7 = shuffle_divide_classify_count(num_hands_shuffled_100, 7)
+    display_classification_numbers(num_hands_shuffled_100, classification_list_100_7)
+    
+    classification_list_1000_7 = shuffle_divide_classify_count(num_hands_shuffled_1000, 7)
+    display_classification_numbers(num_hands_shuffled_1000, classification_list_1000_7)
+    
+    classification_list_10000_7 = shuffle_divide_classify_count(num_hands_shuffled_10000, 7)
+    display_classification_numbers(num_hands_shuffled_10000, classification_list_10000_7)
