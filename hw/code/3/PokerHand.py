@@ -203,14 +203,14 @@ def shuffle_divide_classify_count(num_hands, cards_per_player):
 
 def display_classification_numbers(num_hands_shuffled, classification_list):
     print "Number of Hands shuffled: %s" % num_hands_shuffled
-    print "Number of Pairs: %s   Probability (42.26): %s" % (classification_list[0], float(classification_list[0]) / num_hands_shuffled)
-    print "Number of Two Pairs: %s   Probability (4.75): %s" % (classification_list[1], float(classification_list[1]) / num_hands_shuffled)
-    print "Number of Three of a Kind: %s   Probability (2.11): %s" % (classification_list[2], float(classification_list[2]) / num_hands_shuffled)
-    print "Number of Straight: %s   Probability (0.39): %s" % (classification_list[3], float(classification_list[3]) / num_hands_shuffled)
-    print "Number of Flush: %s   Probability (0.196): %s" % (classification_list[4], float(classification_list[4]) / num_hands_shuffled)
-    print "Number of Full House: %s   Probability (0.1441): %s" % (classification_list[5], float(classification_list[5]) / num_hands_shuffled)
-    print "Number of Four of a Kind: %s   Probability (0.024): %s" % (classification_list[6], float(classification_list[6]) / num_hands_shuffled)
-    print "Number of Straight Flush: %s   Probability (0.0015): %s" % (classification_list[7], float(classification_list[7]) / num_hands_shuffled)
+    print "Number of Pairs: %s   Probability : %s %%" % (classification_list[0], float(classification_list[0]) * 100 / num_hands_shuffled)
+    print "Number of Two Pairs: %s   Probability : %s %%" % (classification_list[1], float(classification_list[1]) * 100 / num_hands_shuffled)
+    print "Number of Three of a Kind: %s   Probability : %s %%" % (classification_list[2], float(classification_list[2]) * 100 / num_hands_shuffled)
+    print "Number of Straight: %s   Probability : %s %%" % (classification_list[3], float(classification_list[3]) * 100 / num_hands_shuffled)
+    print "Number of Flush: %s   Probability : %s %%" % (classification_list[4], float(classification_list[4]) * 100 / num_hands_shuffled)
+    print "Number of Full House: %s   Probability : %s %%" % (classification_list[5], float(classification_list[5]) * 100 / num_hands_shuffled)
+    print "Number of Four of a Kind: %s   Probability : %s %%" % (classification_list[6], float(classification_list[6]) * 100 / num_hands_shuffled)
+    print "Number of Straight Flush: %s   Probability : %s %%" % (classification_list[7], float(classification_list[7]) * 100 / num_hands_shuffled)
     print ""
      
 if __name__ == '__main__':
