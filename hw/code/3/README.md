@@ -4,6 +4,8 @@ Code 3 HomeWork
 #Part 1
 ##Birthday Paradox
 
+<img src="/imgs/Hw3_birthday_paradox.png" width="100%">
+
 #Part 2
 
 Employee Code
