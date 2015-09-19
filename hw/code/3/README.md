@@ -1,6 +1,10 @@
 Code 3 HomeWork
 ================
 
+#Part 1
+##Birthday Paradox
+
+#Part 2
 
 Employee Code
 -------------
@@ -15,3 +19,16 @@ Employee output
 
 ---
 
+
+#Part 3
+##PokerHand
+
+###Result Screenshots:
+
+####For 5 cards per player:
+
+<img src="/imgs/Hw3_5_per_player.png" width="100%">
+
+####For 7 cards per player: 
+
+<img src="/imgs/Hw3_7_per_player.png" width="100%">
