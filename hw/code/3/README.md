@@ -34,3 +34,12 @@ Employee output
 ####For 7 cards per player: 
 
 <img src="/imgs/Hw3_7_per_player.png" width="100%">
+
+
+#####COLLABORATORS
+
++Sakthi Sambasivam (ssambas)
+
++Nitin Sharma (nsharm10)
+
++Nakul Shukla (nshukla)
