@@ -25,3 +25,17 @@ We created a tool, Apollo, that implements our technique in the context of the p
  
 ######Related Work:
 An earlier version of this paper was presented at ISSTA’08 [2]. The Apollo tool presented there did not handle the problem of automatically simulating user interactions in web applications. Instead, it relied on a manual transformation of the program under test to enable the exploration of a few selected user inputs. The current paper also extends [2] by providing a more extensive evaluation, which includes two new large web applications, and by presenting a detailed classification of the faults found by Apollo. In addition, the Apollo tool presented in [2] did not yet support web server integration
+
+####Improvement:
+
+######Simulating user inputs based locally executed JavaScript
+
+The HTML output of a PHP script might contain buttons and arbitrary snippets of JavaScript code that are executed when the user presses the corresponding button. The actions that the JavaScript might perform were not analyzed by Apollo
+
+######Limited tracking in native methods 
+Apollo had limited tracking of input parameters through PHP native methods.
+PHP native methods are implemented in C, which make it difficult to automatically track how input parameters are
+transformed into output parameters.
+
+######Limited sources of input parameters 
+Apollo considers as parameters only inputs coming from the global arrays POST, GET and REQUEST.
