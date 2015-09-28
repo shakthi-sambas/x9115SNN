@@ -70,3 +70,11 @@ The sample applications used here were also used to test the SWAT mentioned in t
 [1] S. Artzi, A. Kiezun, J. Dolby, F. Tip, D. Dig, A. Paradkar, and M. D. Ernst. Finding bugs in dynamic web applications. 
 In ISSTA, pages
 261–272, 2008.
+
+
+###Contributors
+Sakthi Sambasivam
+
+Nitin Sharma
+
+Nakul Shukla
