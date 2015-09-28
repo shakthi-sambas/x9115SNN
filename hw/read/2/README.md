@@ -21,6 +21,7 @@ Web script crashes and malformed dynamically-generated web pages are common erro
 We created a tool, Apollo, that implements our technique in the context of the publicly available PHP interpreter. Apollo first executes the web application under test with an empty input. During each execution, Apollo monitors the program to record the dependence of control-flow on input. Additionally, for each execution Apollo determines whether execution failures or HTML failures occur (for HTML failures, an HTML validator is used as an oracle). Apollo automatically and iteratively creates new inputs using the recorded dependence to create inputs that exercise different control flow.
 
 ######Helpful Visualization:
+ <img src="/imgs/Read2_img.png" height= 350 width=600>
  
 ######Related Work:
 An earlier version of this paper was presented at ISSTA’08 [2]. The Apollo tool presented there did not handle the problem of automatically simulating user interactions in web applications. Instead, it relied on a manual transformation of the program under test to enable the exploration of a few selected user inputs. The current paper also extends [2] by providing a more extensive evaluation, which includes two new large web applications, and by presenting a detailed classification of the faults found by Apollo. In addition, the Apollo tool presented in [2] did not yet support web server integration
