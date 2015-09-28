@@ -26,7 +26,11 @@ These failures occur when application generates malformed HTML. HTML failures oc
 
 ######ii3 Static Analysis:
 
+Static analysis, also called static code analysis, is a method of computer program debugging that is done by examining the code without executing the program. The process provides an understanding of the code structure, and can help to ensure that the code adheres to industry standards
+
 ######ii4 Dynamic Analysis:
+
+Dynamic analysis is the testing and evaluation of a program by executing data in real-time. The objective is to find errors in a program while it is running, rather than by repeatedly examining the code offline
 
 ### Brief Notes
 ######iii1 Motivation 
@@ -40,7 +44,7 @@ We created a tool, Apollo, that implements our technique in the context of the p
  <img src="/imgs/Read2_img.png" height= 350 width=600>
  
 ######iii4 Related Work:
-An earlier version of this paper was presented at ISSTA’08 [2]. The Apollo tool presented there did not handle the problem of automatically simulating user interactions in web applications. Instead, it relied on a manual transformation of the program under test to enable the exploration of a few selected user inputs. The current paper also extends [2] by providing a more extensive evaluation, which includes two new large web applications, and by presenting a detailed classification of the faults found by Apollo. In addition, the Apollo tool presented in [2] did not yet support web server integration
+An earlier version of this paper was presented at ISSTA’08 [1]. The Apollo tool presented there did not handle the problem of automatically simulating user interactions in web applications. Instead, it relied on a manual transformation of the program under test to enable the exploration of a few selected user inputs. The current paper also extends [2] by providing a more extensive evaluation, which includes two new large web applications, and by presenting a detailed classification of the faults found by Apollo. In addition, the Apollo tool presented in [1] did not yet support web server integration
 
 ###Improvement:
 
@@ -55,3 +59,12 @@ transformed into output parameters.
 
 ######iv3 Limited sources of input parameters 
 Apollo considers as parameters only inputs coming from the global arrays POST, GET and REQUEST.
+
+### Relation to previous Paper
+The sample applications used here were also used to test the SWAT mentioned in the previous paper
+
+### Reference
+
+[1] S. Artzi, A. Kiezun, J. Dolby, F. Tip, D. Dig, A. Paradkar, and M. D. Ernst. Finding bugs in dynamic web applications. 
+In ISSTA, pages
+261–272, 2008.
