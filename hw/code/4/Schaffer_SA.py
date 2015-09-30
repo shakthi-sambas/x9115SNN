@@ -34,7 +34,6 @@ def schaffer_baseline():
     # print 'xmax = %d\n' % xmax
     # print 'xmin = %d\n' % xmin
 
-
 def anneal():
 
     return
