@@ -3,78 +3,80 @@ __author__ = 'Nakul'
 import math
 import random
 
+fmin = 0
+fmax = 0
 
 
-def init_energy():
+def ener_calc(x, normalize):
 
-    xmax, xmin =schaffer_baseline()
-    emax = float((((xmax*xmax)+(xmax-2)*(xmax-2))-xmin)/(xmax-xmin))
+    f1 = math.pow(x,2)
+    f2 = math.pow((x-2),2)
 
-    return (xmax,xmin,emax)
+    if normalize:
+        return ((f1+f2) - fmin)/(fmax - fmin)
+    else:
+        return f1+f2
 
-def compute_energy(x, xmax, xmin, emax):
 
-    f1 = x*x
-    f2 = (x-2)*(x-2)
-    e = float(((f1+f2)-xmin)/(xmax-xmin))
-    energy = float(e/emax)
-    # print 'emax = %d' % emax
 
-    return energy
 
 def schaffer_baseline():
 
-    xmin = 100000
-    xmax = 0
-    for i in range(0, 1000):
+    global fmin
+    global fmax
+    x = random.randint(0, pow(10,5))
+    fmin = fmax = ener_calc(x, False)
+    for i in range(0, 100):
 
         x = random.randint(0, pow(10, 5))
-        if x < xmin:
-            xmin = x
+        fx= ener_calc(x,False)
+        if fx < fmin:
+            fmin = fx
 
-        if x > xmax:
-            xmax = x
+        if fx > fmax:
+            fmax = fx
 
-        #   print 'f1+f2 = %d\n' % (f1+f2)
-        # print 'x=%d' % x
-    # print 'xmax = %d\n' % xmax
-    # print 'xmin = %d\n' % xmin
 
-    return (xmax,xmin)
+    print (fmax,fmin)
 
-def probab(p,q, t):
-    p = pow(math.e,(p-q)/t)
+def probab(oldE,newE, temp):
 
+    p = pow(math.e,(oldE-newE)/temp)
+    # print (p)
     return p
 
 def anneal():
-    xmax,xmin,emax = init_energy()
-    s = random.randint(xmin, xmax)
-    e = compute_energy(s,xmax,xmin, emax)
-    sb = s
-    eb = e
+
+    schaffer_baseline()
+    s_init = random.randint(0, pow(10,5))
+    e_init = ener_calc(s_init, True)
+    print (e_init)
+    sb = s_init
+    eb = e_init
+    emax = -1
     count = 1
-    while count < 10000 and e < (emax/emax):
+    while count < 1000 and e_init > emax:
         temp = (count/float(1000))
-        sn = s + random.randint(-10,10)
-        en = compute_energy(sn, xmax, xmin,emax)
+        sn = random.randint(0, pow(10, 5))
+        en = ener_calc(sn, True)
+        # print (en,eb)
         if en < eb:
             sb = sn
             eb = en
             print '!',
-        if en < e:
+        if en < e_init:
             s= sn
             e= en
             print '+',
-        elif probab(e, en, temp) < random.random():
+        elif probab(e_init, en, temp) < random.random():
 
-            s= sn
-            e= en
+            s_init = sn
+            e_init = en
             print '?',
         print ".",
         count = count + 1
         if (count % 25 == 0):
-            print '%d\n' % eb
+            print '%d\n' % float(eb)
 
 
 anneal()
