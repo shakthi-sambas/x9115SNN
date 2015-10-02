@@ -1,82 +1,79 @@
-__author__ = 'Nakul'
-
-import math
+from __future__ import division
 import random
+import sys
+import math
 
-fmin = 0
-fmax = 0
+MAX = 1000000
+MIN = -1000000
 
+def f1(x):
+	return x**2
 
-def ener_calc(x, normalize):
+def f2(x):
+	return (x-2)**2
 
-    f1 = math.pow(x,2)
-    f2 = math.pow((x-2),2)
+def combined_schaffer_values(x, normalize = False, min_val=None, max_val=None):
+	combined_value = f1(x) + f2(x)
+	if normalize:
+		return abs((combined_value - min_val)/(max_val-min_val))
+	else:
+		return combined_value 
 
-    if normalize:
-        return ((f1+f2) - fmin)/(fmax - fmin)
-    else:
-        return f1+f2
+def base_schaffer():
+	min_base_schaffer_value = MAX ** 2
+	max_base_schaffer_value = MIN
+	for i in range(0, 100):
+		current_value = combined_schaffer_values(random.randint(MIN, MAX))
+		if current_value < min_base_schaffer_value:
+			min_base_schaffer_value = current_value
+		if current_value > max_base_schaffer_value:
+			max_base_schaffer_value = current_value
+	return min_base_schaffer_value, max_base_schaffer_value
 
+def P(e, en, depth):
+	return math.exp((e - en)/ depth**5)
 
+def schaffer():
+	epsilon = 1.1
+	kmax = 1000
+	emax = 1 - epsilon
+	min_base_schaffer_value, max_base_schaffer_value = base_schaffer()
+	
+	sv = random.randint(MIN, MAX)
+	sb = sv
+	e = combined_schaffer_values(sv, True, min_base_schaffer_value, max_base_schaffer_value)
+	eb = e
 
+	s = sv
+	k = 1
+	print_string = ''
+	while k < kmax and e > emax:
+		sn = random.randint(MIN, MAX)
+		en = combined_schaffer_values(sn, True, min_base_schaffer_value, max_base_schaffer_value)
 
-def schaffer_baseline():
+		if en < eb:
+			sb = sn
+			eb = en
+			print_string += "!" 
 
-    global fmin
-    global fmax
-    x = random.randint(0, pow(10,5))
-    fmin = fmax = ener_calc(x, False)
-    for i in range(0, 100):
+		if en < e:
+			s = sn 
+			e = en
+			print_string += "+"
 
-        x = random.randint(0, pow(10, 5))
-        fx= ener_calc(x,False)
-        if fx < fmin:
-            fmin = fx
+		elif  P(e, en, (1- k/kmax)) > random.random():
+			s = sn
+			e = en
+			print_string += "?"
+		else:
+			print_string += "."
 
-        if fx > fmax:
-            fmax = fx
+		if k % 25 == 0:
+			print ("%3d : %0.7f ||   %s" % (k, eb, print_string))
+			print_string = ''
+			e = 1
 
+		k += 1
 
-    print (fmax,fmin)
-
-def probab(oldE,newE, temp):
-
-    p = pow(math.e,(oldE-newE)/temp)
-    # print (p)
-    return p
-
-def anneal():
-
-    schaffer_baseline()
-    s_init = random.randint(0, pow(10,5))
-    e_init = ener_calc(s_init, True)
-    print (e_init)
-    sb = s_init
-    eb = e_init
-    emax = -1
-    count = 1
-    while count < 1000 and e_init > emax:
-        temp = (count/float(1000))
-        sn = random.randint(0, pow(10, 5))
-        en = ener_calc(sn, True)
-        # print (en,eb)
-        if en < eb:
-            sb = sn
-            eb = en
-            print '!',
-        if en < e_init:
-            s= sn
-            e= en
-            print '+',
-        elif probab(e_init, en, temp) < random.random():
-
-            s_init = sn
-            e_init = en
-            print '?',
-        print ".",
-        count = count + 1
-        if (count % 25 == 0):
-            print '%d\n' % float(eb)
-
-
-anneal()
+schaffer()
+	
