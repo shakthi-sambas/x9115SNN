@@ -79,6 +79,8 @@ The resutlts do not talk about fault detection but simly code coverage by test s
 The authors do not go into details about why their approach is algorithmically more expensive than some of the techniques
 they compared against in the paper.
 
+####Connection to previous papers
+This approach was used by authors of the first paper to identify interfaces based on input symbolization.
 
 ####References:
 [1] F. Ricca and P. Tonella. Analysis and Testing of Web Applications. In International Conference on Software
