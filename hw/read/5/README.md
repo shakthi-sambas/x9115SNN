@@ -1,3 +1,4 @@
+##Reading Assignment 5
 ####Reference
 #####Precise Interface Identification to Improve Testing and Analysis of Web Applications
 William G.J. Halfond, Saswat Anand, and Alessandro Orso
@@ -26,7 +27,7 @@ As web applications become more widespread, sophisticated,and complex, automated
 such applications have grown in importance. Accurate interface identification is fundamental for many of these tech-
 niques, as the components of a web application communicate extensively via implicitly-dened interfaces to generate cus-
 tomized and dynamic content. However, current techniques for identifying web application interfaces can be incomplete
-or imprecise, which hinders the eectiveness of quality assurance techniques. To address these limitations, we present a
+or imprecise, which hinders the effectiveness of quality assurance techniques. To address these limitations, we present a
 new approach for identifying web application interfaces that is based on a specialized form of symbolic execution.
 
 #####iii2 Related Work
@@ -43,24 +44,60 @@ To evaluate their approach, the authors developed a prototype tool called wam-se
 Execution). wam-se is written in Java and implements their technique for web applications written in the Java Enterprise
 Edition (JEE) framework. The implementation consists of three modules: transform, se engine, and pc analysis,which 
 correspond to the three steps of their approach.
+
 Transform: The input to this moduleis the bytecode of the web application and the specification of program entities to 
 be considered symbolic(in this case,symbolic strings).
+
 SE Engine:The input to this module is the bytecode of the transformed web application, and the output is the set of all 
 Path Conditions (PC) and corresponding symbolic states for each component in the application.
+
 PC Analysis:The input to this module is the set of PCs and symbolic states for each component in the application, and 
 the output is the set of Interface Domain Constraints and accepted interfaces. The module iterates over every PC and 
 symbolic state, identifies the accepted interfaces, and associates the constraints on each IP with its corresponding 
 accepted interface.
 
-#####iii4 
+#####iii4 Baseline Results
+1) Efficiency
 
+            Total Time (s)
+Subject         Wdf     Wse     dfw      Spi.
+Bookstore       4,093   1,479   1,138   2,774
+Classifields      1,985   766     377     239
+Employee Dir.   741     905     253     101
+Events          333     586     231     15
+
+Table 1: Analysis time.
+
+2)Precision
+
+            Identified Interfaces
+Subject         Wse     Wdf
+Bookstore       70      338 (268)
+Classifields      41      222 (181)
+Employee Dir.   18      88 (70)
+Events          25      118 (93)
+
+Table 2: Precision of wam-se and wam-df.
+
+3)Usefulness
+
+             Verification Results
+Approach        Ok      Error
+spider          3 (0)   23 (9)
+wam-df          24 (12) 2 (0)
+wam-se          12 (0)  14 (0)
+
+Table 3: Invocation Verification for Bookstore.
 ####References:
 [1] F. Ricca and P. Tonella. Analysis and Testing of Web Applications. In International Conference on Software
 Engineering, pages 25-34, May 2001.
+
 [2] X. Jia and H. Liu. Rigorous and Automatic Testing of Web Applications. In 6th IASTED International Conference on 
 Software Engineering and Applications,pages 280-285, November 2002.
+
 [3] A. A. Andrews, J. Offutt, and R. T. Alexander. Testing Web Applications by Modeling with FSMs. In Software Systems 
 and Modeling, pages 326-345, July 2005.
+
 [4] S. Elbaum, K.-R. Chilakamarri, M. F. II, and G. Rothermel. Web Application Characterization Through Directed 
 Requests. In International Workshop on Dynamic Analysis, pages 49-56, May 2006.
 
