@@ -30,7 +30,17 @@ tomized and dynamic content. However, current techniques for identifying web app
 or imprecise, which hinders the effectiveness of quality assurance techniques. To address these limitations, we present a
 new approach for identifying web application interfaces that is based on a specialized form of symbolic execution.
 
-#####iii2 Related Work
+#####iii2 Hypotheses
+There are several approaches to identifying web application interfaces, but they have drawbacks that can limit the
+effectiveness of quality assurance techniques. For small web applications, manual inspection is possible. However, for
+larger and more complex web applications, multiple layers of abstraction and the use of frameworks can obscure the in-
+tended function of the components.In this paper the authors present a novel technique that addresses the limitations
+of static analysis based approaches for Interface Identification by leveraging a specialized form of symbolic execution.
+The approach represents certain types of input data to a web application as symbolic values and models interface related
+operations during symbolic execution. The approach then uses the results of the symbolic execution to identify the 
+interfaces of the application.
+
+#####iii3 Related Work
 There are many approaches for interface identification.Several of these rely on developer-provided interface 
 specifications: work by Ricca and Tonella uses developer-provided UML models [1], Jian and Liu use a formal 
 specification [2],and Andrews, Offutt, and Alexander [3] use finite state machines. As compared to this approach, 
@@ -39,7 +49,7 @@ of approaches uses dynamic analysis and web crawling to identify an application'
 colleagues [4]uses a series of requests to an application to identify its interfaces and infer constraints on the IPs 
 of the interfaces by analyzing responses to the request.
 
-#####iii3 Delivery Tools
+#####iii4 Delivery Tools
 To evaluate their approach, the authors developed a prototype tool called wam-se (Web Application Modeling with Symbolic
 Execution). wam-se is written in Java and implements their technique for web applications written in the Java Enterprise
 Edition (JEE) framework. The implementation consists of three modules: transform, se engine, and pc analysis,which 
@@ -56,38 +66,8 @@ the output is the set of Interface Domain Constraints and accepted interfaces. T
 symbolic state, identifies the accepted interfaces, and associates the constraints on each IP with its corresponding 
 accepted interface.
 
-#####iii4 Baseline Results
-1) Efficiency
 
-            Total Time (s)
-Subject         Wdf     Wse     dfw      Spi.
-Bookstore       4,093   1,479   1,138   2,774
-Classifields      1,985   766     377     239
-Employee Dir.   741     905     253     101
-Events          333     586     231     15
 
-Table 1: Analysis time.
-
-2)Precision
-
-            Identified Interfaces
-Subject         Wse     Wdf
-Bookstore       70      338 (268)
-Classifields      41      222 (181)
-Employee Dir.   18      88 (70)
-Events          25      118 (93)
-
-Table 2: Precision of wam-se and wam-df.
-
-3)Usefulness
-
-             Verification Results
-Approach        Ok      Error
-spider          3 (0)   23 (9)
-wam-df          24 (12) 2 (0)
-wam-se          12 (0)  14 (0)
-
-Table 3: Invocation Verification for Bookstore.
 ####References:
 [1] F. Ricca and P. Tonella. Analysis and Testing of Web Applications. In International Conference on Software
 Engineering, pages 25-34, May 2001.
