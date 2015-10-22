@@ -4,8 +4,11 @@
 Dynamic Test Input Generation for Web Applications,
 
 Gary Wassermann, Zhendong Su
+
 University of California, Davis
+
 Dachuan Yu, Ajay Chander, Dinakar Dhurjati, Hiroshi Inamura
+
 DoCoMo USA Labs
 
 ## I KeyWords
