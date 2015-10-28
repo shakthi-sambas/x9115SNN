@@ -24,17 +24,18 @@ Concloic Testing is a hybrid software verification Technique in which it combine
 Automatic Test Generation is a method  which uses technology from formal methods to mechanize or automate the construction of test cases. This is a model based  development where an executable specification of the program is translated to language of model checker and it is the one generate tests automatically.
 
 #### I4. Test Oracles
-Test oracles are the ones which identify the common classes of errors when it occurred.  it basically gives the feed back on each execution of the program like whether the execution is simply passed or failed using assertions.
+Test oracles are the ones which identify the common classes of errors when it occurred.  It basically gives the feed back of each execution of the program like whether the execution is simply passed or failed using assertion mechanism.
 . 
 
 ## II Brief Notes
 
 #### II1. Motivational Statements
 
+Automated Test Generation frameworks has proven useful for finding bugs and improving test coverage on Languages like C and Java which is dominated by numerical values and pointer based data structures. However,  scripting languages  such as PHP promote a style of programming for developing Web applications that emphasizes String values , Objects and arrays. So the authors propose an approach for analyzing web applications by generating testing inputs for them automatically using informations from previous executions. This approach handles dynamic language features more gracefully than static analysis. They generated automated input test generation algorithm that uses runtime values to analyze code, models the semantics of  string operations In this approach they also explored some implementation trade-offs like experiment a constraint generation implementation that works as part of the runtime system, so that more can be done with- out tampering with the program.
 
+#### II2. Data
 
-#### II2. Delivery Tools
-
+The selected three real world PHP Web applications with Known SQL injection vulnerabilities.  The first one is Mantis 1.0.0rc2, is an open source bug tracking system, similar to Bugzilla. The top-level PHP file for this page includes transitively 27 other files for a total of 17,328 lines of PHP in the page. Second one is Mambo 4.5.3, is an open source content management system. This one includes 23 other files for a total of 13,248 lines. The last one is Utopia News Pro 1.3.0, is a news management system. This one contains 6 files for a total of 1529 lines.
 
 
 
