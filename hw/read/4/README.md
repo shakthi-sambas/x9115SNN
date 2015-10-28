@@ -39,30 +39,34 @@ The selected three real world PHP Web applications with Known SQL injection vuln
 
 
 
-#### II3. Statistical Tests
+#### II3. Base Line Results
 
-
+In the first phase of their analysis the authors team perform source to source translation PHP so that they can write results in file a trace for execution. They recorded the results of execution times and corresponding log sizes for one of the Application (Mantis). They also evaluated how long it took in terms of number of test inputs generated and the total time to generate them. In their observation two applications required relatively few test inputs before they generated an attack.
 
 
 #### II4. Related Work
 
+Test Input Generation: Test input generation that lever- ages runtime values, or concolic testing, has been pursued by Various groups. The other groups main is gather both symbolic constraints and concrete values from program executions, and use the concrete values to help re- solve the constraints to generate the next input. This approach works better for programming languages like C and Java, but not for scripting languages like PHP.
 
+Web Application Testing: In the Web application testing most of the groups focussed on static pages and the coverage metric (Page Coverage). Some other group explores  sequence of links in Web applications by nondeterministic- cally exploring action sequences. Most of the testing mechanisms provide more reliable code coverage, but they repeatedly prompt the user for new inputs, so they sacrifice automation
+
+ There is also work done in Static analysis of web applications similar to authors work in find the same classes bug using a same approach.
 
 ## III Areas of Improvement
 
 #### III1.
-The author chooses six different web applications, but apart from their size, he didn't mention how these applications qualified for experimental studies. It would have been useful if the criterias for selecting application were specified.
+The author just chooses three different real web applications, but apart from some preliminary details, he didn't mention how these applications qualified for experimental studies. It would have been useful if the criterias for selecting application were specified.
 
 #### III2. 
-The tests were conducted on a simple hardware setup and also tested locally. So it is difficult to generalize the testing results. It would have been more value added if they had tested this using medium size cluster and also setup remote services in a distributed envrionment.
+The author and his team chosen only PHP Web application for analyzing generating test inputs. It could have been better if they consider other scripting languages like Java Script to generalize their idea.
 
 #### III3.
-
-All the applications chosen for the study are PHP applications. To cover major wides area of web applications they could have selected other applications implemented by other languages like Java to see the overall effectivness and efficiency of this approach.
-
+Their implementation lags few important requirements like it is fully automated and still requires some manual procedures like loading the pages and invoking analyzers etc.
 
 ## References
-
+Dynamic Test Input Generation for Web Applications
+Gary Wassermann, Dachuan Yu, Ajay Chander, Dinakar Dhurjati,
+Hiroshi Inamura, Zhendong Su
 
 ### Group Members
 
