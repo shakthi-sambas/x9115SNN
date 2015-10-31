@@ -29,14 +29,12 @@ Program synthesis is the task of automatically discovering an executable piece o
 There is a tremendous upsurge in SBSE for SPL area and the author’s team did a  comprehensive work on topics like recent advances in genetic engineering, search based branch merge and Graft Genetic improvement. Based on their exhaustive study they also highlighted in the direction for future work. They mainly focused on  genetic improvements and showing how these improvements  might be exploited by SPL researchers and practitioners.
 
 
-#### II2. Data
+#### II2. Sampling Procedures
+Real world feature models typically involve many constraints. Tracing . Tracing variability information between problems (requirements) and solutions (products) is challenging. Search based feature model selection is isomorphic to the previously studied search based requirements selection problem. Search based requirements selection seeks to find requirement selections, while respecting constraints. There are many researchers and practitioners formulate procedures and constraints to select a sampling models and features. 
 
 
-
-
-#### II3. Base Line Results
-
-
+#### II3. Best Practices
+The product line architecture captures implementation concerns, with traceability links to the feature model and products. A product line architecture can be used to capture the core salient features, shared by all products on the product line. Colonzi and Guizzo formalized the design patterns in optimization problems primarily focusing on architectural objectives such as extensibility and modularity.
 
 #### II4. Future Work
 
