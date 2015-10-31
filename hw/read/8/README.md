@@ -21,7 +21,7 @@ Genetic Programming is an evolutionary algorithm inspired by biological evolutio
 
 
 #### I4. Program Synthesis
- 
+Program synthesis is the task of automatically discovering an executable piece of code given user intent expressed using various forms of constraints such as input-output examples, demonstrations, natural language, etc. 
 
 ## II Brief Notes
 
