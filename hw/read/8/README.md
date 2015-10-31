@@ -26,6 +26,7 @@ Program synthesis is the task of automatically discovering an executable piece o
 ## II Brief Notes
 
 #### II1. Motivational Statements
+There is a tremendous upsurge in SBSE for SPL area and the author’s team did a  comprehensive work on topics like recent advances in genetic engineering, search based branch merge and Graft Genetic improvement. Based on their exhaustive study they also highlighted in the direction for future work. They mainly focused on  genetic improvements and showing how these improvements  might be exploited by SPL researchers and practitioners.
 
 
 #### II2. Data
@@ -52,6 +53,10 @@ pass
 pass
 
 ## References
+
+SBSE for software product line engineering: a survey and directions for future work,
+M. Harman, Y. Jia, J. Krinke, W. B. Langdon, J. Petke & Y. Zhang
+CREST Centre, University College London, Malet Place, London, WC1E 6BT, U.K.
 
 ### Group Members
 
