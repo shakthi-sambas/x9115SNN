@@ -1,1 +1,1 @@
-<img src="/imgs/hw6_read.png" height= 350 width=600>
+<img src="/imgs/hw6_read.png" height= 600 width=800>
