@@ -37,7 +37,9 @@ Real world feature models typically involve many constraints. Tracing . Tracing 
 The product line architecture captures implementation concerns, with traceability links to the feature model and products. A product line architecture can be used to capture the core salient features, shared by all products on the product line. Colonzi and Guizzo formalized the design patterns in optimization problems primarily focusing on architectural objectives such as extensibility and modularity.
 
 #### II4. Future Work
-
+To incorporate the successes of genetic programming in software engineering, search based software engineers have turned to a technique that has come to be known as ‘genetic improvement’. Genetic Improvement can be used to provide Pareto frontier of programs. This Pareto program surface contains a large number of different programs (‘products’ in SPL nomenclature), each of which share the same functionality, yet all of which differ in their non-functional properties.
+	When the feature model grows exponentially, that will lead unmanageable  number of different product variants. This situation is called ‘branchomania’. Using SBSE develop techniques to control branchmania by identifying branch similarities, extracting parameters and subsequently searching for suitable tunings that yield individual products. A set of child branches of a shared parent could thereby be merged into a single modified parent with an additional set of parameters that capture the variability previously present in the children.In this way, a combination of parameter extraction and tuned parameter instantiation could merge several products into a single parameterised product.
+	To exploit the current improvements in hardware specifically multicore processors, Search based software engineers have realised the possibility of parallelisation as a route to scalability using computing clusters. Parallel SBSE may prove to be particularly important in scaling computational search algorithms to handle large-scale software product lines.
 
 ## III Areas of Improvement
 
