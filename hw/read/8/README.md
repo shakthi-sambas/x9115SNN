@@ -46,13 +46,13 @@ To exploit the current improvements in hardware specifically multicore processor
 ## III Areas of Improvement
 
 #### III1.
-pass
+The paper explains some of the topics in details and explains the other topics in an  extremely succinct manner , which leave us many questions unanswered. It could have been better if the author’s team treat all the topics more uniform manner.
 
 #### III2. 
-pass
+Although the paper give some excellent details about SBSE history, It lack important element like study instrument to suffice more depth in their study.
 
 #### III3.
-pass
+The author used so many references and it leaves none of them covered fully and leave us more questions than the solutions to some of the topics.
 
 ## References
 
