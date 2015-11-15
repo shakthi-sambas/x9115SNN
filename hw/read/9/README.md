@@ -1,9 +1,9 @@
 ##Reading Assignment 9
 #####Reference
 Genetic Programming for Reverse Engineering
-Mark Harman, William B. Langdon and Westley Weimery
-University College London, CREST centre, UK
-yUniversity of Virginia, Virginia, USA
+Mark Harman (University College London, CREST centre, UK), 
+William B. Langdon ((University College London, CREST centre, UK),
+Westley Weimery (University of Virginia, Virginia, USA)
 
 #####Keywords
 ######ii1 Search Based Software Engineering
@@ -61,11 +61,13 @@ the host (System H) for the new feature F should pass after the transplant.
 
 2) Passes regression tests: The transplant does not disrupt existing behaviour by introducing side effects. There are
 two cases of side effects:
-a) The truth, the whole truth: The transplant retains required existing behaviour of H. Ideally, all tests
+
+2a) The truth, the whole truth: The transplant retains required existing behaviour of H. Ideally, all tests
 (and invariants, contracts, etc.) associated with System H (the host) that do not directly conflict with feature F
 from the donor (System D) should pass after transplantation. Standard regression testing might be used to determine
 if the transplant sacrifices existing behaviour.
-b) ... and nothing but the truth: The transplant does not introduce new undesired behaviour. This might be measured 
+
+2b) ... and nothing but the truth: The transplant does not introduce new undesired behaviour. This might be measured 
 in terms of anomaly detection or fuzz testing . Automated test data generation, could be used to augment the host’s 
 existing test suite for higher coverage of the changed area HF.
 
