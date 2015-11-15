@@ -35,7 +35,7 @@ assignment and feature location, bug fixing, and code migration.
 ######iii3 Commentary
 At a high level, key steps likely to occur in a software transplant algorithm to add feature F from source System D 
 (the donor) to destination System H (the host):
-1) Localise: Identify and localise the code DF  D that implements F (this might use, for example, concept and
+1) Localise: Identify and localise the code that implements F (this might use, for example, concept and
 feature location
 
 2) Abstract: Construct an abstraction AF from DF , retaining control and data flow directly related to F in the
@@ -46,9 +46,9 @@ donor but abstracting references to D-specific identifiers so that these become 
 4) Interface: Construct an interface, I and add it to the host, H, allowing the resulting combination H [ I to act as 
 a ‘harness’ into which candidate transplants can be inserted and evaluated.
 
-5) Insert: Instantiate and concretise a candidate transplant A0 F (concretised from AF ) at HF .
+5) Insert: Instantiate and concretise a candidate transplant(concretised from AF ) at HF .
 
-6) Validate: Validate the resulting transplanted system H[I [ A0 F .
+6) Validate: Validate the resulting transplanted system.
 
 7) Repeat: Repeat the above steps until a suitably well tolerated transplant is found.
 
