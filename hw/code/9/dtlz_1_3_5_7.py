@@ -35,10 +35,34 @@ class Can(object):
         new_can.energy = self.energy
         return new_can
 
+class Base_DTLZ(object):
+def __init__(self):
+        self.decs = []
+        self.objs = []
+
+    def objectives(self):
+        return []  
+
+    def energy(self, can):
+        can.objs_score = [obj.function(can) for obj in i.objs]
+        return sum(can.objs_score)
 
 
 
-class DTLZ_1():
+    def createPopulation(self):
+        count = 0
+        while True:
+            decs = [rand.uniform(d.low, d.high) for d in self.decs]
+            one = Can(decs = decs)
+            count += 1
+            return one
+
+   
+
+
+
+
+class DTLZ_1(base_DTLZ):
     def __init__(self, n=10, m=2):
         self.n = n
         self.m = m       
@@ -81,7 +105,7 @@ class DTLZ_1():
     //?? Do we need To String method here Shakthi
 
 
-class DTLZ_3():
+class DTLZ_3(Base_DTLZ):
     
     def __init__(self, n=10, m=2):
         self.n = n
@@ -127,14 +151,14 @@ class DTLZ_3():
         //Do we need a toString method here........
 
 
-class DTLZ_5():
+class DTLZ_5(Base_DTLZ):
     def __init__(self, n=10, m=2):
         self.n = n
         self.m = m       
         self.decs = [Dec(name=d, low=0, high=1) for d in range(self.n)]
         self.objs = self.object()
 
-def objectives(self):
+    def objectives(self):
      
         objectives = []
         
