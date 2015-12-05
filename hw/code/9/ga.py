@@ -9,12 +9,12 @@ import sys
 
 class GA():
     def __init__(self):
-        self.configs = O(
-        gens = 5000,  // is too high can we use 500 or 1000
+        self.configs = util(
+        gens = 5000,  #// is too high can we use 500 or 1000
         candidates = 100,
-        better = lt,
+        better = util.lt,
         iter = 100,
-        retain = 0.2, // How much can we retain
+        retain = 0.2, #// How much can we retain
         p_mutate= 0.05
         )
 
@@ -34,29 +34,29 @@ class GA():
           parents_have_fit_score = self.sampling(population, base_DTLZ, self.configs.retain)
 
             
-            next_generation = [can for can, score in parents_have_fit_score]
+          next_generation = [can for can, score in parents_have_fit_score]
             
-            childrenNumber = self.configs.candidates - len(next_generation)
+          childrenNumber = self.configs.candidates - len(next_generation)
 
-            for j in range(childrenNumber):
-                father, mother = self.select(parents_have_fit_score)
-                new_can = self.crossover([father, mother])
-                new_can = self.mutate(new_can, base_DTLZ, self.configs.p_mutate)
-                next_generation.append(new_can)
-                e_new = base_DTLZ.energy(new_can)
+          for j in range(childrenNumber):
+            father, mother = self.select(parents_have_fit_score)
+            new_can = self.crossover([father, mother])
+            new_can = self.mutate(new_can, base_DTLZ, self.configs.p_mutate)
+            next_generation.append(new_can)
+            e_new = base_DTLZ.energy(new_can)
             
 
             population = sorted(next_generation,  key=lambda x: base_DTLZ.energy(x))
-            e_new = base_DTLZ.energy(population[0])
-            currentIterand.append(e_new)
+          e_new = base_DTLZ.energy(population[0])
+          currentIter.append(e_new)
 
-            if e_new < e_best:
-                e_best = e_new
-                print('%', end='')          
-            else:
+          if e_new < e_best:
+            e_best = e_new
+            print('%', end='')
+        else:
                 print('*', end='')
 
-            // TODO : Check For Early Termination
+           ## // TODO : Check For Early Termination
             
 
         # TODO: How to do Parito frontier
@@ -68,7 +68,7 @@ class GA():
 
         dominated_populations = []
 
-        //TODO Struggling to understand Dominate function also, I am not sure where to weave that code ????
+        ##TODO Struggling to understand Dominate function also, I am not sure where to weave that code ????
         
         
 
@@ -90,7 +90,7 @@ class GA():
     @staticmethod
     def mutate(new_can, base_DTLZ, mutate_prob):
         # TODO: Can we have a better muation method
-        if rand.random() > p_mutate:
+        if rand.random() > util.p_mutate:
             return new_can
 
         pos = rand.randint(0, len(new_can.decs) - 1)
