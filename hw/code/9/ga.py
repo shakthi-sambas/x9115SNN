@@ -10,7 +10,7 @@ import sys
 class GA():
     def __init__(self):
         self.configs = util(
-        gens = 5000,  #// is too high can we use 500 or 1000
+        gens = 1000,  #// is too high can we use 500 or 1000
         candidates = 100,
         better = util.lt,
         iter = 100,
