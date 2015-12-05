@@ -1,7 +1,7 @@
 import math
 from copy import deepcopy
 import random as rand
-from util import *
+#from util import *
 
 ##We can either use this wrapper classes or we can use gadget classes
 
@@ -29,7 +29,7 @@ class Can(object):
         self.energy = energy
 
     def createCandidate(self):
-        new_can = Candidate()
+        new_can = Can()
         new_can.decs = deepcopy(self.decs)
         new_can.obj_fit_score = self.obj_fit_score[:]
         new_can.energy = self.energy
@@ -62,7 +62,7 @@ class Base_DTLZ(object):
 
 
 
-class DTLZ_1(base_DTLZ):
+class DTLZ_1(Base_DTLZ):
     def __init__(self, n=10, m=2):
         self.n = n
         self.m = m       
@@ -76,7 +76,7 @@ class DTLZ_1(base_DTLZ):
         def g(can):
             temp = 0
             for x in can.decs:
-                temp += (x - 0.5)**2 - cos(20*pi*(x - 0.5)) 
+                temp += (x - 0.5)**2 - math.cos(20*math.pi*(x - 0.5))
             g = 100 * (len(can.decs) + temp)
             return g
         def f0(can):
@@ -84,7 +84,7 @@ class DTLZ_1(base_DTLZ):
             for p in range(self.m - 1): f_ *= can.decs[p] 
             return f_
 
-        objectives.append(Objective(name = 0, function = f0))
+        objectives.append(Obj(name = 0, function = f0))
 
         for q in range(1, self.m - 1):
             def f(can):
@@ -93,12 +93,12 @@ class DTLZ_1(base_DTLZ):
                     f_ *= can.decs[q]
                 f_ *= 1 - can.decs[self.m - (q+1)]
                 return f_
-            objectives.append(Objective(name = q, function = f))
+            objectives.append(Obj(name = q, function = f))
 
         def fm(can):
             return 0.5 *  (1 - can.decs[0]) * (1.0 + g(can))
         
-        objectives.append(Objective(name = self.m-1, function = fm))   
+        objectives.append(Obj(name = self.m-1, function = fm))
         
         return objectives[:]
 
@@ -120,30 +120,30 @@ class DTLZ_3(Base_DTLZ):
         def g(can):
             temp = 0
             for x in can.decs:
-                temp += (x - 0.5)**2 - cos(20*pi*(x - 0.5)) 
+                temp += (x - 0.5)**2 - math.cos(20*math.pi*(x - 0.5))
             g = 100 * (len(can.decs) + temp)
             return g
 
 
         def f0(can):
             f_ = 0.5 * (1 + g(can))
-            for p in range(self.m - 1): f_ *= cos(can.decs[p] * pi * 0.5)
+            for p in range(self.m - 1): f_ *= math.cos(can.decs[p] * math.pi * 0.5)
             return f_
-        objectives.append(Objective(name = 0, function = f0))
+        objectives.append(Obj(name = 0, function = f0))
 
         for q in range(1, self.m - 1):
             def f(can):
                 f_ = 0.5 * (1 + g(can))
                 for r in range(self.m - (q+1)):
-                    f_ *= cos(can.decs[r] * pi * 0.5)
-                f_ *= sin( can.decs[self.m - (q+1)] * 0.5 )
+                    f_ *= math.cos(can.decs[r] * math.pi * 0.5)
+                f_ *= math.sin( can.decs[self.m - (q+1)] * 0.5 )
                 return f_
-            objectives.append(Objective(name = j, function = f))
+            objectives.append(Obj(name = q, function = f))
 
 
-       def fm(can):
-            return sin(can.decs[0] * pi * 0.5) * (1.0 + g(can))
-        objectives.append(Objective(name = self.m-1, function = fm))
+        def fm(can):
+            return math.sin(can.decs[0] * math.pi * 0.5) * (1.0 + g(can))
+        objectives.append(Obj(name = self.m-1, function = fm))
         
         return objectives[:]
 
@@ -175,24 +175,24 @@ class DTLZ_5(Base_DTLZ):
         def f0(can):
             f_ = (1 + g(can))
             for x in range(self.m - 1):
-                f_ *= cos( theta(can, x) * pi * 0.5)
+                f_ *= math.cos( theta(can, x) * math.pi * 0.5)
             return f_
 
-        objectives.append(Objective(name = 0, function = f0))
+        objectives.append(Obj(name = 0, function = f0))
 
         for q in range(1, self.m - 1):
             def f(can):
                 f_ = 0.5 * (1 + g(can))
                 for r in range(self.m - (q+1)):
-                    f_ *= cos(theta(can, r) * pi * 0.5)
-                f_ *= sin( theta(can, self.m - (q+1)) * 0.5 )
+                    f_ *= math.cos(theta(can, r) * math.pi * 0.5)
+                f_ *= math.sin( theta(can, self.m - (q+1)) * 0.5 )
                 return f_
-            objectives.append(Objective(name = q, function = f))
+            objectives.append(Obj(name = q, function = f))
 
         def fm(can):
-            return sin(theta(can, 0) * pi * 0.5) * (1.0 + g(can))
+            return math.sin(theta(can, 0) * math.pi * 0.5) * (1.0 + g(can))
 
-        objectives.append(Objective(name = self.m-1, function = fm))
+        objectives.append(Obj(name = self.m-1, function = fm))
         return objectives[:]
 
 
