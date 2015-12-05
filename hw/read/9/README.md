@@ -64,7 +64,7 @@ two cases of side effects:
 
 2a) The truth, the whole truth: The transplant retains required existing behaviour of H. Ideally, all tests
 (and invariants, contracts, etc.) associated with System H (the host) that do not directly conflict with feature F
-from the donor (System D) should pass after transplantation. Standard regression testing might be used to determine
+from the donor (System D) should pass after transplantation. Standard reg`ression testing might be used to determine
 if the transplant sacrifices existing behaviour.
 
 2b) ... and nothing but the truth: The transplant does not introduce new undesired behaviour. This might be measured 

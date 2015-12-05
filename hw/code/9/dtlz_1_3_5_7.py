@@ -3,7 +3,7 @@ from copy import deepcopy
 import random as rand
 from util import *
 
-//We can either use this wrapper classes or we can use gadget classes 
+##We can either use this wrapper classes or we can use gadget classes
 
 
 
@@ -36,7 +36,7 @@ class Can(object):
         return new_can
 
 class Base_DTLZ(object):
-def __init__(self):
+    def __init__(self):
         self.decs = []
         self.objs = []
 
@@ -102,7 +102,7 @@ class DTLZ_1(base_DTLZ):
         
         return objectives[:]
 
-    //?? Do we need To String method here Shakthi
+    ##//?? Do we need To String method here Shakthi
 
 
 class DTLZ_3(Base_DTLZ):
@@ -148,7 +148,7 @@ class DTLZ_3(Base_DTLZ):
         return objectives[:]
 
 
-        //Do we need a toString method here........
+       ## //Do we need a toString method here........
 
 
 class DTLZ_5(Base_DTLZ):
