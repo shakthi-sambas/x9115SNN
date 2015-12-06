@@ -288,31 +288,36 @@ class DTLZ7(Instance):
 		self.number_variables = self.num_decisions
 		self.objectives = self.get_objectives()
 	
-	def gx(self, x, y=0.0):
-		for i in xrange(0, self.number_variables):
-			y += x[i]
-		return(9*y/self.number_variables)
+	def func_g(self, value):
+		sol=0.0
+		for i in range(0, self.number_variables):
+			sol += value[i]
+		return 9*sol/self.number_variables
 
-	def hx(self, f, g, x, y=0.0):
-		for i in xrange(0, self.num_objectives - 1):
-			y += (f[i](x) / (1 + g)) * (1 + math.sin(3 * math.pi * f[i](x)))
-		return self.num_objectives - y
+	def func_h(self, f, g_value, value):
+		sol=0.0
 
-	def last_obj(self, x, f):
-		g = 1 + self.gx(x)
-		res = (1 + g) * self.hx(f, g, x)
+		for i in range(0, self.num_objectives - 1):
+			sol += (f[i](value) / (1 + g_value)) * (1 + math.sin(3 * math.pi * f[i](value)))
+		
+		return self.num_objectives - sol
+
+	def last_obj(self, value, f):
+		g_value = 1 + self.func_g(value)
+		res = (1 + g_value) * self.func_h(f, g_value, value)
 		return res
 
-	def obj(self, x, i):
-		return x[i]
+	def obj(self, value, i):
+		return value[i]
 
 	def get_objectives(self):
-		f = [None] * self.num_objectives
-		for i in xrange(0, self.num_objectives - 1):
-			f[i] = lambda x : self.obj(x, i)
-		f[self.num_objectives - 1] = lambda x : self.last_obj(x, f)
-		# print f
-		return f
+		objectives_list = [None] * self.num_objectives
+
+		for i in range(0, self.num_objectives - 1):
+			objectives_list[i] = lambda value : self.obj(value, i)
+		objectives_list[self.num_objectives - 1] = lambda value : self.last_obj(value, objectives_list)
+
+		return objectives_list
 
 	def combined_function_values(self, sol, e=0):
 		for objective in self.get_objectives():
