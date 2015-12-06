@@ -195,6 +195,41 @@ class DTLZ_5(Base_DTLZ):
         objectives.append(Obj(name = self.m-1, function = fm))
         return objectives[:]
 
+class DTLZ_7(Base_DTLZ):
+    def __init__(self, n=10, m=2:
+        self.n = n
+        self.m = m       
+        self.decs = [Dec(name=x, low=0, high=1) for x in range(self.n)]
+        self.objs = self.objectives()   #
+
+    def objectives(self):
+
+        objectives = [] 
+
+        def g(can):
+            g = 1 + 9.0 / len(can.decs) * sum(can.decs)
+            return g
+
+        for p in range(self.m - 1):
+            
+            def f(can):
+                return can.decs[0]
+            objectives.append(Obj(name = p, function = f))
+
+        
+        def fm(can):
+            summ = 0.0
+            for p in range(self.m - 1):
+                q_i = can.decs[p]
+                summ += (q_i / (1 + g(can))) * (1 + sin(3 * pi * q_i))
+            h = (self.m - summ)
+            return (1 + g(can)) * h
+
+        objectives.append(Obj(name = self.m-1, function = fm))
+        
+        return objectives[:]
+    
+    # TODO: Need to implement toString method for printing and debugging
 
 
 if __name__ == '__main__':
