@@ -3,6 +3,37 @@ import random
 import sys
 import math
 import sk
+PI = math.pi
+
+
+def loss1(k, x, y):
+    return (x - y) if better(k) == lt else (y - x)
+
+
+def exp_loss(k, x, y, n):
+    return math.exp(loss1(k, x, y) / n)
+
+
+def loss(x1, y1, base_model):
+    x, y = objs(x1, base_model), objs(y1, base_model)
+    n = min(len(x), len(y))  # lengths should be equal
+    losses = [exp_loss(k, xi, yi, n) for k, (xi, yi) in enumerate(zip(x, y))]
+    # print losses
+    return sum(losses) / n
+
+def cdom(x, y, base_model):
+    return loss(x, y, model) < loss(y, x, base_model)
+
+def gt(x, y): return x > y
+
+def lt(x, y): return x < y
+
+def better(i): return lt
+
+def objs(can, base_model):
+	return [obj(can) for obj in base_model.get_objectives()]
+
+
 
 class Instance():
 	MAX = MIN = 0
@@ -56,8 +87,8 @@ class Instance():
 	                bs = copy
 	    return [bs, sub_counter]
 
-	def type1_comparison(self):
-		pass
+	def type1(self, solution, sb):
+		return cdom(solution, sb, self)
 
 	def get_objectives_list(self, era_list=[]):
 		objectives_list = []
@@ -341,12 +372,12 @@ def sa(model, MIN=0, MAX=0, epsilon = 0.9, kmax = 2000, similar_eras_type3=10):
 		# print 'in '
 		sn = model.generate_random_solution()
 		en = model.normailzed_energy(sn)
+		if model.type1(sn, sb):
 
-		if en<eb:
 			sb = sn
 			eb = en
 			print_string += '!'
-		if en < e:
+		if model.type1(sn, s):
 			s = sn 
 			e = en
 			print_string += '+'
@@ -377,7 +408,7 @@ def sa(model, MIN=0, MAX=0, epsilon = 0.9, kmax = 2000, similar_eras_type3=10):
 	return get_era_energy_list(previous_era)
 	# return previous_era
 
-def mws(model, trials=100, max_changes=25, p = 0.5, threshold = 1.0, step=10, similar_eras_type3=10):
+def mws(model, trials=100, max_changes=25, p = 0.5, threshold = 1, step=10, similar_eras_type3=10):
 	model = model(10, 2)
 	counter = sub_counter = 0
 	model.get_baseline(10000)
@@ -440,6 +471,9 @@ def mws(model, trials=100, max_changes=25, p = 0.5, threshold = 1.0, step=10, si
 					trial_outcome = '.'
 				ls, le = cs, ce
 			print_string += trial_outcome
+			if model.type1(cs, bs):
+				bs = cs
+
 
 		if counter % 100 == 0: 
 			if previous_era:
@@ -511,7 +545,7 @@ def de(model, num_candidates=100, max_repeats=10000, f=0.75, cf=0.3, epsilon=0.0
 	eb = 1
 
 	sn = en = None
-
+	sb = model.generate_random_solution()
 	while True:
 		print_string = ''
 		
@@ -520,12 +554,13 @@ def de(model, num_candidates=100, max_repeats=10000, f=0.75, cf=0.3, epsilon=0.0
 			e = model.normailzed_energy(parent)
 			sn = evolve(select_three_randomly(n))
 			en = model.normailzed_energy(sn)
+			s = frontier[n]
 
-			if en < eb:
+			if model.type1(sn, sb):
 				sb,  eb = sn, en
 
 				print_string += '!'
-			if en < e:
+			if model.type1(sn, s):
 				frontier[n] = sn
 				print_string += '+'
 			else:
@@ -553,26 +588,26 @@ def de(model, num_candidates=100, max_repeats=10000, f=0.75, cf=0.3, epsilon=0.0
 
 # model = DTLZ7(10,2)
 
-def dtlz7():
-	try:
-		era_list = []
-		model_name = ["SA", "MWS", "DE"]
-		final_era_energy_list = []
-		i = 0
-		for optimizer in [sa, mws, de]:
-			k = 0
-			for _ in range(20):
-				model = DTLZ7(10,2)
-				final_era_energy_list = optimizer(DTLZ7)
-				final_era_energy_list.insert(0, model_name[i] + str(k))
-				era_list.append(final_era_energy_list)
-				k = k+1
-			i += 1
-		print sk.rdivDemo(era_list)
-		return True	
-	except:
-		dtlz7()
+# def dtlz7():
+# 	try:
+era_list = []
+model_name = ["SA", "MWS", "DE"]
+final_era_energy_list = []
+i = 0
+for optimizer in [sa, mws, de]:
+	k = 0
+	for _ in range(20):
+		model = DTLZ7(10,2)
+		final_era_energy_list = optimizer(DTLZ7)
+		final_era_energy_list.insert(0, model_name[i] + str(k))
+		era_list.append(final_era_energy_list)
+		k = k+1
+	i += 1
+print sk.rdivDemo(era_list)
+# return True	
+# 	except:
+# 		dtlz7()
 
 
-dtlz7()
+# dtlz7()
 
