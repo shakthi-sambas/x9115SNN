@@ -1,14 +1,243 @@
+DTLZ1
 Running GA for : DTLZ1  for 10  Decisions and 2  Objectives
-Early Termination on Generation:  207
-Best Energy:  0.308477519882
+Early Termination on Generation:  249
+Best Energy:  0.119366327946
+DTLZ1
 Running GA for : DTLZ1  for 10  Decisions and 4  Objectives
-Early Termination on Generation:  159
-Best Energy:  0.104117826947
+Early Termination on Generation:  117
+Best Energy:  0.0179930966967
+DTLZ1
 Running GA for : DTLZ1  for 10  Decisions and 6  Objectives
 Early Termination on Generation:  135
-Best Energy:  0.259979312813
+Best Energy:  0.325524518821
+DTLZ1
 Running GA for : DTLZ1  for 10  Decisions and 8  Objectives
-Early Termination on Generation:  111
-Best Energy:  0.223939414545
+Early Termination on Generation:  165
+Best Energy:  0.278629112593
+DTLZ1
 Running GA for : DTLZ1  for 20  Decisions and 2  Objectives
-[0.35654135765393435, 0.6014090215130333, 0.12385883032070943, 0.5380606898652421, 0.43413413345078267, 0.6029098212685351, 0.15157410636363844, 0.8067746624407578, 0.6412002526071123, 0.6582538094462158, 0.12107043843735554, 0.0077171022059397965, 0.10531384849816294, 0.22781374617774497, 0.7897810280619254, 0.29076656641739784, 0.12091488164625785, 0.9613748040326768, 0.8268339308303896, 0.38634949890184345]
+Early Termination on Generation:  195
+Best Energy:  0.0101005640331
+DTLZ1
+Running GA for : DTLZ1  for 20  Decisions and 4  Objectives
+Early Termination on Generation:  123
+Best Energy:  0.404739606471
+DTLZ1
+Running GA for : DTLZ1  for 20  Decisions and 6  Objectives
+Early Termination on Generation:  213
+Best Energy:  0.0121853405932
+DTLZ1
+Running GA for : DTLZ1  for 20  Decisions and 8  Objectives
+Early Termination on Generation:  135
+Best Energy:  0.604988286077
+DTLZ1
+Running GA for : DTLZ1  for 40  Decisions and 2  Objectives
+Early Termination on Generation:  141
+Best Energy:  0.345532714056
+DTLZ1
+Running GA for : DTLZ1  for 40  Decisions and 4  Objectives
+Early Termination on Generation:  189
+Best Energy:  0.681078080839
+DTLZ1
+Running GA for : DTLZ1  for 40  Decisions and 6  Objectives
+Early Termination on Generation:  123
+Best Energy:  7.60027103524
+DTLZ1
+Running GA for : DTLZ1  for 40  Decisions and 8  Objectives
+Early Termination on Generation:  111
+Best Energy:  0.52764575275
+DTLZ3
+Running GA for : DTLZ3  for 10  Decisions and 2  Objectives
+Early Termination on Generation:  135
+Best Energy:  0.14143224673
+DTLZ3
+Running GA for : DTLZ3  for 10  Decisions and 4  Objectives
+Early Termination on Generation:  123
+Best Energy:  1.8510868604
+DTLZ3
+Running GA for : DTLZ3  for 10  Decisions and 6  Objectives
+Early Termination on Generation:  141
+Best Energy:  0.528856705504
+DTLZ3
+Running GA for : DTLZ3  for 10  Decisions and 8  Objectives
+Early Termination on Generation:  153
+Best Energy:  0.0205300427794
+DTLZ3
+Running GA for : DTLZ3  for 20  Decisions and 2  Objectives
+Early Termination on Generation:  111
+Best Energy:  0.331728702015
+DTLZ3
+Running GA for : DTLZ3  for 20  Decisions and 4  Objectives
+Early Termination on Generation:  279
+Best Energy:  1.97052431331
+DTLZ3
+Running GA for : DTLZ3  for 20  Decisions and 6  Objectives
+Early Termination on Generation:  159
+Best Energy:  0.0511348681113
+DTLZ3
+Running GA for : DTLZ3  for 20  Decisions and 8  Objectives
+Early Termination on Generation:  117
+Best Energy:  6.83934640381
+DTLZ3
+Running GA for : DTLZ3  for 40  Decisions and 2  Objectives
+Early Termination on Generation:  177
+Best Energy:  3.14521061154
+DTLZ3
+Running GA for : DTLZ3  for 40  Decisions and 4  Objectives
+Early Termination on Generation:  171
+Best Energy:  10.3719769166
+DTLZ3
+Running GA for : DTLZ3  for 40  Decisions and 6  Objectives
+Early Termination on Generation:  237
+Best Energy:  2.57563175417
+DTLZ3
+Running GA for : DTLZ3  for 40  Decisions and 8  Objectives
+Early Termination on Generation:  189
+Best Energy:  5.54861632561
+DTLZ5
+Running GA for : DTLZ5  for 10  Decisions and 2  Objectives
+Early Termination on Generation:  159
+Best Energy:  0.00129751070153
+DTLZ5
+Running GA for : DTLZ5  for 10  Decisions and 4  Objectives
+Early Termination on Generation:  207
+Best Energy:  0.00247325342159
+DTLZ5
+Running GA for : DTLZ5  for 10  Decisions and 6  Objectives
+Early Termination on Generation:  123
+Best Energy:  0.0128462038065
+DTLZ5
+Running GA for : DTLZ5  for 10  Decisions and 8  Objectives
+Early Termination on Generation:  339
+Best Energy:  0.000189348768229
+DTLZ5
+Running GA for : DTLZ5  for 20  Decisions and 2  Objectives
+Early Termination on Generation:  111
+Best Energy:  1.0531830218e-06
+DTLZ5
+Running GA for : DTLZ5  for 20  Decisions and 4  Objectives
+Early Termination on Generation:  141
+Best Energy:  0.00581303776215
+DTLZ5
+Running GA for : DTLZ5  for 20  Decisions and 6  Objectives
+Early Termination on Generation:  141
+Best Energy:  0.0011363748645
+DTLZ5
+Running GA for : DTLZ5  for 20  Decisions and 8  Objectives
+Early Termination on Generation:  165
+Best Energy:  0.00946321058256
+DTLZ5
+Running GA for : DTLZ5  for 40  Decisions and 2  Objectives
+Early Termination on Generation:  153
+Best Energy:  0.000531928393041
+DTLZ5
+Running GA for : DTLZ5  for 40  Decisions and 4  Objectives
+Early Termination on Generation:  189
+Best Energy:  0.00101930870302
+DTLZ5
+Running GA for : DTLZ5  for 40  Decisions and 6  Objectives
+Early Termination on Generation:  153
+Best Energy:  0.0339951409838
+DTLZ5
+Running GA for : DTLZ5  for 40  Decisions and 8  Objectives
+Early Termination on Generation:  165
+Best Energy:  0.00446980006793
+DTLZ7
+Running GA for : DTLZ7  for 10  Decisions and 2  Objectives
+Early Termination on Generation:  483
+Best Energy:  6.29839447539
+DTLZ7
+Running GA for : DTLZ7  for 10  Decisions and 4  Objectives
+Early Termination on Generation:  765
+Best Energy:  13.1487630564
+DTLZ7
+Running GA for : DTLZ7  for 10  Decisions and 6  Objectives
+Early Termination on Generation:  735
+Best Energy:  19.8249391594
+DTLZ7
+Running GA for : DTLZ7  for 10  Decisions and 8  Objectives
+Early Termination on Generation:  465
+Best Energy:  26.9286884704
+DTLZ7
+Running GA for : DTLZ7  for 20  Decisions and 2  Objectives
+Early Termination on Generation:  759
+Best Energy:  8.08393679633
+DTLZ7
+Running GA for : DTLZ7  for 20  Decisions and 4  Objectives
+Best Energy:  15.9004181661
+DTLZ7
+Running GA for : DTLZ7  for 20  Decisions and 6  Objectives
+Early Termination on Generation:  219
+Best Energy:  24.763853198
+DTLZ7
+Running GA for : DTLZ7  for 20  Decisions and 8  Objectives
+Early Termination on Generation:  531
+Best Energy:  31.3135293625
+DTLZ7
+Running GA for : DTLZ7  for 40  Decisions and 2  Objectives
+Early Termination on Generation:  939
+Best Energy:  9.24241810176
+DTLZ7
+Running GA for : DTLZ7  for 40  Decisions and 4  Objectives
+Early Termination on Generation:  627
+Best Energy:  18.4079696785
+DTLZ7
+Running GA for : DTLZ7  for 40  Decisions and 6  Objectives
+Early Termination on Generation:  501
+Best Energy:  26.5496301747
+DTLZ7
+Running GA for : DTLZ7  for 40  Decisions and 8  Objectives
+Early Termination on Generation:  855
+Best Energy:  35.2403176231
+
+rank ,         name ,    med   ,  iqr 
+----------------------------------------------------
+   1 ,   DTLZ7_40_6 ,    0.15  ,  0.00 (*              |              ), 0.15,  0.15,  0.15
+   1 ,   DTLZ7_10_8 ,    0.16  ,  0.00 (*              |              ), 0.16,  0.16,  0.16
+   1 ,   DTLZ7_40_4 ,    0.20  ,  28.57 (*              |              ), 0.20,  0.20,  28.76
+   1 ,   DTLZ7_20_4 ,    0.22  ,  22.83 (*              |              ), 0.22,  0.22,  23.05
+   1 ,   DTLZ7_20_6 ,    0.47  ,  0.00 (*              |              ), 0.47,  0.47,  0.47
+   1 ,   DTLZ7_40_8 ,    0.50  ,  0.00 (*              |              ), 0.50,  0.50,  0.50
+   1 ,   DTLZ5_10_4 ,    0.50  ,  0.00 (*              |              ), 0.50,  0.50,  0.50
+   1 ,   DTLZ7_20_8 ,    0.53  ,  0.00 (*              |              ), 0.53,  0.53,  0.53
+   1 ,   DTLZ5_10_8 ,    0.93  ,  0.00 (*              |              ), 0.93,  0.93,  0.93
+   1 ,   DTLZ7_10_4 ,    0.94  ,  27.03 (*              |              ), 0.94,  0.94,  27.97
+   1 ,   DTLZ7_10_6 ,    0.95  ,  0.00 (*              |              ), 0.95,  0.95,  0.95
+   1 ,   DTLZ5_20_6 ,    1.28  ,  0.00 (*              |              ), 1.28,  1.28,  1.28
+   1 ,   DTLZ5_40_4 ,    1.49  ,  0.00 (*              |              ), 1.49,  1.49,  1.49
+   1 ,   DTLZ5_10_2 ,    1.61  ,  0.00 (*              |              ), 1.61,  1.61,  1.61
+   1 ,   DTLZ5_20_8 ,    1.65  ,  0.00 (*              |              ), 1.65,  1.65,  1.65
+   1 ,   DTLZ5_20_4 ,    1.83  ,  0.00 (*              |              ), 1.83,  1.83,  1.83
+   1 ,   DTLZ5_10_6 ,    1.83  ,  0.00 (*              |              ), 1.83,  1.83,  1.83
+   1 ,   DTLZ5_20_2 ,    1.93  ,  0.00 (*              |              ), 1.93,  1.93,  1.93
+   1 ,   DTLZ5_40_8 ,    3.49  ,  0.00 (*              |              ), 3.49,  3.49,  3.49
+   1 ,   DTLZ5_40_2 ,    3.53  ,  0.00 (*              |              ), 3.53,  3.53,  3.53
+   1 ,   DTLZ5_40_6 ,    3.62  ,  0.00 (*              |              ), 3.62,  3.62,  3.62
+   1 ,   DTLZ7_10_2 ,    6.48  ,  12.20 (*              |              ), 0.38,  12.58,  12.58
+   1 ,   DTLZ7_20_2 ,    6.58  ,  12.46 (*              |              ), 0.35,  12.81,  12.81
+   1 ,   DTLZ7_40_2 ,    6.67  ,  11.62 (*              |              ), 0.86,  12.48,  12.48
+   2 ,   DTLZ3_10_2 ,    89.55  ,  0.00 ( *             |              ), 89.55,  89.55,  89.55
+   3 ,   DTLZ1_40_2 ,    90.36  ,  0.00 ( *             |              ), 90.36,  90.36,  90.36
+   4 ,   DTLZ1_20_4 ,    102.28  ,  0.00 ( *             |              ), 102.28,  102.28,  102.28
+   5 ,   DTLZ1_40_4 ,    105.78  ,  0.00 ( *             |              ), 105.78,  105.78,  105.78
+   6 ,   DTLZ3_20_6 ,    118.90  ,  0.00 ( *             |              ), 118.90,  118.90,  118.90
+   7 ,   DTLZ1_20_2 ,    243.48  ,  0.00 (  *            |              ), 243.48,  243.48,  243.48
+   8 ,   DTLZ3_10_8 ,    252.09  ,  0.00 (  *            |              ), 252.09,  252.09,  252.09
+   9 ,   DTLZ1_10_6 ,    315.31  ,  0.00 (   *           |              ), 315.31,  315.31,  315.31
+  10 ,   DTLZ1_10_4 ,    318.28  ,  0.00 (   *           |              ), 318.28,  318.28,  318.28
+  11 ,   DTLZ1_10_8 ,    401.20  ,  0.00 (    *          |              ), 401.20,  401.20,  401.20
+  12 ,   DTLZ1_20_6 ,    416.70  ,  0.00 (    *          |              ), 416.70,  416.70,  416.70
+  13 ,   DTLZ3_40_4 ,    447.53  ,  0.00 (     *         |              ), 447.53,  447.53,  447.53
+  14 ,   DTLZ1_10_2 ,    453.59  ,  0.00 (     *         |              ), 453.59,  453.59,  453.59
+  15 ,   DTLZ3_20_2 ,    542.70  ,  0.00 (      *        |              ), 542.70,  542.70,  542.70
+  16 ,   DTLZ3_20_4 ,    641.58  ,  0.00 (       *       |              ), 641.58,  641.58,  641.58
+  17 ,   DTLZ1_40_8 ,    728.19  ,  0.00 (        *      |              ), 728.19,  728.19,  728.19
+  18 ,   DTLZ3_40_8 ,    778.09  ,  0.00 (         *     |              ), 778.09,  778.09,  778.09
+  19 ,   DTLZ3_40_6 ,    834.16  ,  0.00 (         *     |              ), 834.16,  834.16,  834.16
+  20 ,   DTLZ3_10_6 ,    1027.07  ,  0.00 (            *  |              ), 1027.07,  1027.07,  1027.07
+  21 ,   DTLZ3_10_4 ,    1112.54  ,  0.00 (             * |              ), 1112.54,  1112.54,  1112.54
+  22 ,   DTLZ1_20_8 ,    1169.52  ,  0.00 (             * |              ), 1169.52,  1169.52,  1169.52
+  23 ,   DTLZ1_40_6 ,    1829.36  ,  0.00 (               |     *        ), 1829.36,  1829.36,  1829.36
+  24 ,   DTLZ3_20_8 ,    2140.84  ,  0.00 (               |         *    ), 2140.84,  2140.84,  2140.84
+  25 ,   DTLZ3_40_2 ,    2543.96  ,  0.00 (               |             *), 2543.96,  2543.96,  2543.96
+[(13, 453.59091877933287, <sk.Num instance at 0x7f00c1287ef0>), (9, 318.27823002376294, <sk.Num instance at 0x7f00bd8c7b00>), (8, 315.30949594517284, <sk.Num instance at 0x7f00bd8ceab8>), (10, 401.1992144887146, <sk.Num instance at 0x7f00bd87fef0>), (6, 243.48491527634306, <sk.Num instance at 0x7f00bd8b14d0>), (3, 102.28063341863893, <sk.Num instance at 0x7f00bd896518>), (11, 416.69837161978074, <sk.Num instance at 0x7f00bd896e60>), (21, 1169.5193116361395, <sk.Num instance at 0x7f00bd88b5f0>), (2, 90.36356103814178, <sk.Num instance at 0x7f00bd88b560>), (4, 105.77545018341333, <sk.Num instance at 0x7f00bd8ae320>), (22, 1829.3621908420764, <sk.Num instance at 0x7f00bd8ae7a0>), (16, 728.1893807050268, <sk.Num instance at 0x7f00bd8ae8c0>), (1, 89.55384037772006, <sk.Num instance at 0x7f00bd881908>), (20, 1112.5434572395832, <sk.Num instance at 0x7f00bd881b90>), (19, 1027.074564894852, <sk.Num instance at 0x7f00bd8f7ef0>), (7, 252.085201570125, <sk.Num instance at 0x7f00bd8f7d88>), (14, 542.6992185213908, <sk.Num instance at 0x7f00bd8f7b90>), (15, 641.5826920186296, <sk.Num instance at 0x7f00bd8f7e18>), (5, 118.9030452101976, <sk.Num instance at 0x7f00bd883290>), (23, 2140.842287324372, <sk.Num instance at 0x7f00bd883518>), (24, 2543.960756526821, <sk.Num instance at 0x7f00bd883b90>), (12, 447.53248199790664, <sk.Num instance at 0x7f00bd8e4d40>), (18, 834.1633953667078, <sk.Num instance at 0x7f00c6c45440>), (17, 778.0876933222876, <sk.Num instance at 0x7f00c6c45a70>), (0, 1.6055806688560992, <sk.Num instance at 0x7f00c6c451b8>), (0, 0.5031894841059971, <sk.Num instance at 0x7f00c6c45098>), (0, 1.8318917331162643, <sk.Num instance at 0x7f00c6c457a0>), (0, 0.9318138301672511, <sk.Num instance at 0x7f00c6c45248>), (0, 1.9348817009416015, <sk.Num instance at 0x7f00c6c45560>), (0, 1.8293433354171453, <sk.Num instance at 0x7f00c6c45710>), (0, 1.283921906560372, <sk.Num instance at 0x7f00c6c45e18>), (0, 1.6530855951789365, <sk.Num instance at 0x7f00c6c45758>), (0, 3.5268120770529356, <sk.Num instance at 0x7f00c6c45680>), (0, 1.4909437501293141, <sk.Num instance at 0x7f00c6c45f38>), (0, 3.6197886699911486, <sk.Num instance at 0x7f00c6c45d88>), (0, 3.4884937439691126, <sk.Num instance at 0x7f00c6c45368>), (0, 6.481625636772409, <sk.Num instance at 0x7f00c6c45488>), (0, 0.9399433761820319, <sk.Num instance at 0x7f00c6c45638>), (0, 0.9477266149994313, <sk.Num instance at 0x7f00c6c45518>), (0, 0.15992398195912305, <sk.Num instance at 0x7f00bd894998>), (0, 6.583734829183209, <sk.Num instance at 0x7f00bd894830>), (0, 0.2154402283381196, <sk.Num instance at 0x7f00bd894098>), (0, 0.4742814204421344, <sk.Num instance at 0x7f00bd894368>), (0, 0.5301802231830368, <sk.Num instance at 0x7f00bd894440>), (0, 6.670012302568801, <sk.Num instance at 0x7f00bd8d61b8>), (0, 0.19806393043194626, <sk.Num instance at 0x7f00bd8d6d40>), (0, 0.1481614578732482, <sk.Num instance at 0x7f00bd8d6c68>), (0, 0.5008929635318959, <sk.Num instance at 0x7f00bd8d6e18>)]
