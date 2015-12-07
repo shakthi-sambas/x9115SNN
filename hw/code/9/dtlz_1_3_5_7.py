@@ -47,8 +47,6 @@ class Base_DTLZ(object):
         can.objs_score = [obj.function(can) for obj in i.objs]
         return sum(can.objs_score)
 
-
-
     def createPopulation(self):
         count = 0
         while True:
@@ -58,10 +56,6 @@ class Base_DTLZ(object):
             return one
 
    
-
-
-
-
 class DTLZ_1(Base_DTLZ):
     def __init__(self, n=10, m=2):
         self.n = n

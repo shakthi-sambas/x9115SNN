@@ -307,14 +307,14 @@ class DTLZ7(Instance):
 		res = (1 + g_value) * self.func_h(f, g_value, value)
 		return res
 
-	def obj(self, value, i):
-		return value[i]
+	def objective_value(self, value, index):
+		return value[index]
 
 	def get_objectives(self):
 		objectives_list = [None] * self.num_objectives
 
 		for i in range(0, self.num_objectives - 1):
-			objectives_list[i] = lambda value : self.obj(value, i)
+			objectives_list[i] = lambda value : self.objective_value(value, i)
 		objectives_list[self.num_objectives - 1] = lambda value : self.last_obj(value, objectives_list)
 
 		return objectives_list
