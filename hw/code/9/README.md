@@ -1,28 +1,41 @@
 ## Genetic Algorithm to Optimize DTLZ Model
 
-###I. Abstract
-The Prime Objective of this Project is to optimize DTLZ models (DTZ1 , DTZ3 ,DTZ5 ,DTZ7) using GA algorithm. During optimization our goal  is to identify best decision for the desired objectives.  
-How we solved this problem (couple of sentences)
-Result (High level single sentence on what we find)
+###Abstract
+
+This assignment makes use of genetic algorithm to optimize problem space for DTLZ7.  On a broader scale, this assignment shows how genetic algorithms can be used for optimizing Multi Objective Evolutionary Algorithms (like DTLZ7). The report discusses how we implemented the genetic algorithm and the results we achieved.
+
+###Introduction
+
+A genetic algorithm (GA) is a method for solving both constrained and unconstrained optimization problems based on a natural selection process that mimics biological evolution. The algorithm repeatedly modifies a population of individual solutions. At each step, the genetic algorithm randomly selects individuals from the current population and uses them as parents to produce the children for the next generation. Over successive generations, the population "evolves" toward an optimal solution. Genetic algorithms can be used to solve problems that are not well suited for standard optimization algorithms, like problems in which the objective function is discontinuous, etc [1]. There are two main ways in which genetic algorithms differ from classical algorithms - First, a classic algorithm generates a single candidate at each iteration whereas a genetic algorithm generates a population of candidates at each iteration. The best candidate solution in a population approaches an optimal solution.
+
+To dig deeper into genetic algorithms, we should discuss the different states the algorithm has: 
+(1) Initial Population: Specified number of candidate solutions are generated and added to form initial population. 
+(2) Fitness Score: Each candidate generated during the course of the algorithm has a fitness score associated with it. Fitness score gives a measure of how good a particular solution is. Fitness score is calculated by a "Fitness Function". A higher fitness score makes it more probable for the candidate to participate in "reproduction" as the algorithm progresses. The candidates with a low fitness score are eventually left out of the population space. 
+(3) Selection: Selection refers to finding required number of "Fit" candidates who can participate in reproduction. The analogy comes from biological evolution where the genetic quality of offsprings depends on the genetic makeup of parents. If the genes in parents are strong, the offspring is highly likely to have good genes and in turn better of everything.  Due to the importance of selection strategy in governing the performance of genetic algorithms, a lot of research has been done in the area. Many strategies like Tournament Selection, Ranking Selection, etc have been formulated.     
+For the purpose of this assignment, selection refers to selecting the best 20% candidates from a population to ensure we converge to the optimal solution. This comes from the argument that the fittest candidates in a population are closer to the optimal solution. The strategy used is binary tournament selection. The details of how we use this in the algorithm is discussed in later sections.
+(4) Crossover: The concept of crossover comes from biological evolution process. It is a process in which chromosomes pair up with each other and exchange different segments of their genetic material to form new chromosomes that are passed along to the offspring. For the assignment purposes, crossover is used to combine parts of two candidates to form a new solution. Details are explained in later section.
+(5) Mutation: In biological evolution, mutation refers to a permanent change of DNA sequence. Mutations result from damage to DNA which is not repaired, errors in the process of replication, or from the insertion or deletion of segments of DNA by mobile genetic elements. Mutations may or may not produce discernible changes in the observable characteristics.Mutation can result in several different types of change in sequences. For this assignment, mutation refers to changing some parts of a candidate permanently to get a new solution. Details are explained in later section.
+
+###Algorithm Description
+
+The genetic algorithm we implemented is inspired by [2]. The pseudocode used as reference is given below as a screenshot:
+
+<img src="/imgs/GA_Pseudocode.png">
+
+###Threats to Validity
+
+###Results
+
+###Future Work
+
+###References
+
+[1] http://www.mathworks.com/discovery/genetic-algorithm.html
+
+[2] http://www.cs.ucc.ie/~dgb/courses/tai/notes/handout12.pdf
+
+http://www.cleveralgorithms.com/nature-inspired/evolution/genetic_algorithm.html
+
+https://www.youtube.com/watch?v=zwYV11a__HQ
 
 
-###II. Background
-
-Genetic Algorithm is an adaptive strategy and type of local search that mimics  evolution by taking population of strings which encode possible solutions and combines them based on a fitness function to produce individuals that are more fit. There are five major states in GA. 1. Initial Population 2. Fitness Function 3.Selection 4. CrossOver 5. Mutation. Initial population begins with randomly generated states. Fitness function produces next generation of states. In selection, based on the scores given by the Fitness function we identify the suitable candidates randomly.  For example in the case of biological evolution we determine how likely an individual  able to reproduce and drop the candidates who are longer able to reproduce. The selected candidates go through cross over state, in the cross over state few random cross over points is chosen to mix the genetic information to setup the different candidates and their offsprings. In the next phase we subject the offsprings to mutation with a small random probability. This is the basis of genetic algorithm and this iterative process may result in an improved adaptive-fit between the phenotypes of individuals in a population and the environment.
-
-###III. Introduction (Do we need this..)
-
-
-###IV. Description
-
-###V. Threats to Validity
-
-###VI. Results
-
-###VII Future Work
-
-###VIII. References
-
-[1] http://www.cleveralgorithms.com/nature-inspired/evolution/genetic_algorithm.html
-
-[2] https://www.youtube.com/watch?v=zwYV11a__HQ
