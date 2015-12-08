@@ -82,31 +82,29 @@ def de(dtlz_model, num_candidates=10, max_repeats=100, f=0.75, cf=0.3, epsilon=0
 	eb = model.eval(frontier[0])
 	bs = frontier[0]
 
-	while k < maximum:
-		k += 1
-		for n, parent in enumerate(frontier):
-			print "................................................................................................................."
-			print "Exploring ", n+1 , "/", len(frontier), "on the frontier"
-			random_three = select_three_randomly(n)
-			first_candidate = frontier[random_three[0]]
-			e = model.eval(parent)
+	for n, parent in enumerate(frontier):
+		print "................................................................................................................."
+		print "Exploring ", n+1 , "/", len(frontier), "on the frontier"
+		random_three = select_three_randomly(n)
+		first_candidate = frontier[random_three[0]]
+		e = model.eval(parent)
 
-			if cf< random.random():
-				en = model.eval(first_candidate)
-				if en > e:
-					e = en
-					frontier[n] = first_candidate
-			else:
-				evolved_candidate = evolve(random_three)
-				en = model.eval(evolved_candidate)
-				if en > e:
-					e = en
-					frontier[n] = evolved_candidate
-			if e > eb:
-				print "Previous best:", eb
-				print "Parameter Values [Population Size, Mutation Rate, Crossover Probability]:", [int(parent[0]), parent[1], parent[2]]
-				eb = e
-				bs = frontier[n]
+		if cf< random.random():
+			en = model.eval(first_candidate)
+			if en > e:
+				e = en
+				frontier[n] = first_candidate
+		else:
+			evolved_candidate = evolve(random_three)
+			en = model.eval(evolved_candidate)
+			if en > e:
+				e = en
+				frontier[n] = evolved_candidate
+		if e > eb:
+			print "Previous best:", eb
+			print "Parameter Values [Population Size, Mutation Rate, Crossover Probability]:", [int(parent[0]), parent[1], parent[2]]
+			eb = e
+			bs = frontier[n]
 	print "\n"
 	print "\n"
 	print "\n"
