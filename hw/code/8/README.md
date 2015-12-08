@@ -19,7 +19,7 @@ Simulated annealing (SA) is a probabilistic technique for approximating the glob
 MaxWalkSat  non parametric stochastic search algorithm that samples the landscape and tries to improve the solution in one dimension at a time rather than randomly jumping around the problem space like Simulated Annealing. MaxWalkSat jumps around the problem space to find a solution and then explores the landscape around it. Then after some tries, it takes goes to the best solution that was found from the initial solution. Simulated annealing lacks the landscape exploration bit as compared to MaxWalkSat.
   
 ####Differential Evolution:
-  
+Differential Evolution is a Stochastic Direct Search and Global Optimization algorithm, and is a type of an Evolutionary Algorithm from the field of Evolutionary Computation. Differential Evolution algorithm involves maintaining a population of candidate solutions subjected to iterations of recombination, evaluation, and selection. The recombination part involves combining existing candidate solutions according to its simple formulae, and then keeping whichever candidate solution has the best score or fitness on the optimization problem at hand. In this way the optimization problem is treated as a black box that merely provides a measure of quality given a candidate solution and the gradient is therefore not needed.  
   
   
 ###IV. Description
@@ -31,3 +31,5 @@ MaxWalkSat  non parametric stochastic search algorithm that samples the landscap
 ###VII. References
   
 [1] https://en.wikipedia.org/wiki/Simulated_annealing
+[2] Clever Algorithms - Jason Brownlee
+[3] http://en.wikipedia.org/wiki/Differential_evolution
