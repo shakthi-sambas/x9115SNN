@@ -20,3 +20,9 @@ Genetic Algorithm is an adaptive strategy and type of local search that mimics  
 ###VI. Results
 
 ###VII Future Work
+
+###VIII. References
+
+[1] Clever Algorithms - Jason Brownlee
+
+[2] https://www.youtube.com/watch?v=zwYV11a__HQ
