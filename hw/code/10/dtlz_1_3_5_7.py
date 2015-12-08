@@ -26,20 +26,6 @@ class Instance():
 	def get_baseline(self, tries):
 		self.min_energy_value = self.MAX ** 2
 		self.max_energy_value = self.MIN
-		# print self.min_energy_value
-		# print self.max_energy_value
-		# for i in range (0, tries):
-		# 	while True:
-		# 		sol = self.generate_random_solution()
-		# 		if self.constraint_check(sol):
-		# 			break
-			
-		# 	current_energy = self.normailzed_energy(sol)
-		# 	if current_energy < self.min_energy_value:
-		# 		self.min_energy_value = current_energy
-		# 	if current_energy > self.max_energy_value:
-		# 		self.max_energy_value = current_energy
-		# return self.min_energy_value, self.max_energy_value
 		for i in range(100):
 			random_solution = self.generate_random_solution()
 			energy_value = self.combined_function_values(random_solution)
@@ -50,14 +36,11 @@ class Instance():
 				self.max_energy_value = energy_value
 		return self.max_energy_value, self.min_energy_value   
 
-
 	def normailzed_energy(self, sol):
 		current_value = self.combined_function_values(sol)
 		normailzed_energy = abs((current_value - self.min_energy_value)/ (self.max_energy_value - self.min_energy_value))
 		return normailzed_energy
 
-	def get_objective_values(self, solution):
-		assert False, 'Implement get_objective_values in subclass'
 
 	def type1(self, solution, state_best):
 		solution_objective_list = self.get_objective_values(solution)
@@ -98,6 +81,10 @@ class Instance():
 
 	def mutate(self, sol, index):
 		return True
+
+	def get_objective_values(self, solution):
+		assert False, 'Implement get_objective_values in subclass'
+
 
 class DTLZ7(Instance):
 	def __init__(self, num_decisions, num_objectives):
@@ -295,7 +282,6 @@ class DTLZ3(Instance):
   		sol[index] = random.uniform(self.MIN_BOUND[index], self.MAX_BOUND[index])
   		return sol
 
-
 class DTLZ1(Instance):
 	def __init__(self, num_decisions, num_objectives):
 		self.num_decisions = num_decisions
@@ -350,237 +336,3 @@ class DTLZ1(Instance):
   	def mutate(self, sol, index):
   		sol[index] = random.uniform(self.MIN_BOUND[index], self.MAX_BOUND[index])
   		return sol
-
-def ga(model, num_decisions, num_objectives, population_size = 100, mutation_probability=0.5, crossover_probability=0.9, max_generations=1000):
-
-	# make initial population sample
-	# make selection.
-
-	model = model(num_decisions, num_objectives)
-	model.get_baseline(100)
-	era_threshold = 100
-
-
-	def make_initial_population_sample():
-		population_list=[]
-		for i in range(population_size):
-			while True:
-				random_candidate = model.generate_random_solution()
-				if model.constraint_check(random_candidate):
-					break
-
-			population_list.append(random_candidate)
-		return population_list
-		
-	initial_population = make_initial_population_sample()
-
-	def fittest_selection(population, base_population):
-		fittest_candidates_number_list = []
-		dominated_candidates_number_list = []
-		dominated_population = []
-		# print len(population)
-		for candidate_one in range(len(population) - 1):
-			if candidate_one not in dominated_candidates_number_list:
-				for candidate_two in range (len(population) - 1):
-					if candidate_one != candidate_two and model.type1(population[candidate_one], population[candidate_two]):
-						if candidate_one not in fittest_candidates_number_list:
-							fittest_candidates_number_list.append(candidate_one)
-						if candidate_two not in dominated_candidates_number_list:
-							dominated_candidates_number_list.append(candidate_two)
-							dominated_population.append(population[candidate_two])
-						try:
-							fittest_candidates_number_list.remove(candidate_two)
-						except:
-							pass
-		return fittest_candidates_number_list, dominated_population
-	
-	def get_fittest_selection(population, base_population):
-		fittest_candidates_number_list, dominated_population = fittest_selection(population, base_population)
-		# # print dominated_population
-		# required_population = (0.2 * len(population)) 
-		# while True:
-		# 	if (len(fittest_candidates_number_list) < required_population):
-		# 		now_fittest, dominated_population = fittest_selection(dominated_population, base_population)
-		# 		for i in now_fittest:
-		# 			if (len(fittest_candidates_number_list) < required_population) and i not in fittest_candidates_number_list:
-		# 				fittest_candidates_number_list.append(i)
-		# 	else:
-		# 		break
-		if len(fittest_candidates_number_list)<20:
-			while True:
-				random_index = random.randint(0, len(population)-1)
-				if random_index not in fittest_candidates_number_list:
-					fittest_candidates_number_list.append(random_index)
-				if len(fittest_candidates_number_list) == 20:
-					break
-		return fittest_candidates_number_list
-
-	def crossover(parents):
-		mom = initial_population[parents[0]]
-		dad = initial_population[parents[1]]
-		child = dad
-		random_crossover_point = random.randint(0, len(initial_population[parents[0]]))
-		child[random_crossover_point:] = mom[random_crossover_point:]
-		return child
-
-	def mutate(kid):
-		for i in range(model.number_variables):
-			random_prob = random.random()
-			if random_prob < mutation_probability:
-				# print "mutating"
-				# print kid
-				lower_bound, upper_bound = model.MIN_BOUND[i], model.MAX_BOUND[i]
-				kid[i] = random.uniform(lower_bound, upper_bound)
-				# print kid
-		return kid
-
-	def get_population(candidates):
-		population = []
-		for i in candidates:
-				population.append(initial_population[i])
-		return population
-
-	def plot(population, maxX=True, maxY=True):
-		x = []
-		for child in population:
-			x.append(model.normailzed_energy(child))
-		y = []
-		for i in x:
-			y_value = 4 - (i * (1 + math.sin(3*PI*i)))
-			y.append(y_value)
-		sorted_list = sorted([[x[i], y[i]] for i in range(len(x))], reverse=False)
-		pareto_front = [sorted_list[0]]
-		
-		for pair in sorted_list[1:]:
-			if maxY:
-				if pair[1] < pareto_front[-1][1]:
-					pareto_front.append(pair)
-			else:
-				if pair[1] >= pareto_front[-1][1]:
-					pareto_front.append(pair)
-		'''Plotting process'''
-		
-		for j, k in zip(x, y):
-			# print j, k
-			plt.scatter(x, y)	
-		# pf_X = [pair[0] for pair in pareto_front]
-		# pf_Y = [pair[1] for pair in pareto_front]
-		# plt.plot(pf_X, pf_Y)
-		plt.xlabel("Objective 1")
-		plt.ylabel("Objective 2")
-		plt.show()
-
-	def get_hypervolume(all_generations_list, population_size, tries = 100000):
-	    number_of_generations = len(all_generations_list)
-
-	    frontier = all_generations_list[number_of_generations - 1]
-
-	    for _ in range(tries):
-	        random_generation_index = random.randint(0, number_of_generations - 2)
-	        random_frontier_index = random.randint(0, len(frontier) - 1)
-	        random_population_index = random.randint(0, population_size - 1)
-
-	        frontier_element = frontier[random_frontier_index]
-	        randomly_selected_element = all_generations_list[random_generation_index][random_population_index]
-	        if model.type1(frontier_element, randomly_selected_element):
-	            continue
-	        elif model.type1(randomly_selected_element, frontier_element):
-	            frontier[random_frontier_index] = randomly_selected_element
-	            all_generations_list[random_generation_index][random_population_index] = frontier_element
-	        else :
-	            frontier.append(randomly_selected_element)
-
-	    for element_one in frontier:
-	        for element_two in frontier:
-	            if element_one == element_two:
-	                continue
-	            if model.type1(element_one, element_two):
-	                frontier.remove(element_two)
-
-	    hv = (number_of_generations * population_size - len(frontier)) / (number_of_generations * population_size)
-	    return hv
-	
-	base_population = initial_population
-	best_solution = initial_population[0]
-	min_energy = model.combined_function_values(best_solution)
-	all_generations_list = [initial_population]
-	for generation in range(max_generations):
-		fittest_candidates = get_fittest_selection(initial_population, base_population)
-		# print (fittest_candidates)
-
-		next_generation_population = get_population(fittest_candidates)
-
-		new_kids = []
-
-		########################
-		#Crossover and Mutation#
-		########################
-
-		child = []
-		while True:
-			parents = random.sample(set(fittest_candidates), 2)
-
-			if crossover_probability > random.random():
-				crossovered_child = crossover(parents)
-				# print crossovered_child  
-				child = mutate(crossovered_child)
-				if crossovered_child == child:
-					pass
-					# print "mutation didnt work"
-				new_kids.append(child)
-				if len(next_generation_population) + len(new_kids) == len(initial_population):
-					# print "crossing over"
-					break
-				try:
-					child_energy = model.combined_function_values(child)
-				except:
-					print child
-				if child_energy < min_energy:
-					min_energy = child_energy
-
-		for new_kid in new_kids:
-			next_generation_population.append(new_kid)
-		# next_generation_population = next_generation_population + new_kids
-		if generation > 10:
-			era_threshold += model.type2_comparison(initial_population, next_generation_population)
-
-		if era_threshold == 0:
-			print "Early Termination on Generation: ", generation + 1
-			break
-			
-		
-		initial_population = next_generation_population
-
-		all_generations_list.append(initial_population)
-		# plot(initial_population)
-
-	hyper_volume = get_hypervolume(all_generations_list, population_size)
-	return min_energy, initial_population, hyper_volume
-
-
-era_list=[]
-for model in [DTLZ7]:
-	for dec in [10, 20, 40]:
-		for obj in [2, 4, 6, 8]:
-			hyper_volume_list = []
-			start_time = time.time()
-			print "#########################################################################################"
-			for i in range(5):
-				m = model(dec, obj)
-				print "Running GA for : " + m.model_name() + "  for " + str(dec) + "  Decisions and " + str(obj) + "  Objectives"
-				best_energy, last_population, hyper_volume = ga(model, dec, obj)
-				objective_list = m.get_objectives_list(last_population)
-				objective_list.insert(0, m.model_name() + "_"+str(dec)+ "_"+str(obj))
-				print "Best Energy: ", best_energy
-				print "hyper volume", str(hyper_volume)
-				hyper_volume_list.append(hyper_volume)
-			print "........................................................................................"
-			print "Mean Hyper Volume for 5 runs:", numpy.mean(hyper_volume_list)
-			print "Standard Deviation for Hyper Volume in 5 runs:", numpy.std(hyper_volume_list)
-
-				# era_list.append(objective_list)
-print "Total Time Elapsed(in minutes): ", (time.time() - start_time)/60
-
-
-
-# print sk.rdivDemo(era_list)

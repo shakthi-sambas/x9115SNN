@@ -1,0 +1,289 @@
+#########################################################################################
+Running GA for : DTLZ3  for 10  Decisions and 2  Objectives
+Early Termination on Generation:  153
+Best Energy:  0.370088323429
+hyper volume 0.99954248366
+Running GA for : DTLZ3  for 10  Decisions and 2  Objectives
+Early Termination on Generation:  141
+Best Energy:  1.27260725515
+hyper volume 0.999432624113
+Running GA for : DTLZ3  for 10  Decisions and 2  Objectives
+Early Termination on Generation:  303
+Best Energy:  0.129347175565
+hyper volume 0.999801980198
+Running GA for : DTLZ3  for 10  Decisions and 2  Objectives
+Early Termination on Generation:  165
+Best Energy:  0.592226787345
+hyper volume 0.999454545455
+Running GA for : DTLZ3  for 10  Decisions and 2  Objectives
+Early Termination on Generation:  165
+Best Energy:  0.0149659599868
+hyper volume 0.999636363636
+........................................................................................
+Mean Hyper Volume for 5 runs: 0.999573599413
+Standard Deviation for Hyper Volume in 5 runs: 0.000134991259626
+#########################################################################################
+Running GA for : DTLZ3  for 10  Decisions and 4  Objectives
+Early Termination on Generation:  117
+Best Energy:  0.659122964075
+hyper volume 0.999487179487
+Running GA for : DTLZ3  for 10  Decisions and 4  Objectives
+Early Termination on Generation:  123
+Best Energy:  0.815412684534
+hyper volume 0.998292682927
+Running GA for : DTLZ3  for 10  Decisions and 4  Objectives
+Early Termination on Generation:  117
+Best Energy:  2.0295135416
+hyper volume 0.999230769231
+Running GA for : DTLZ3  for 10  Decisions and 4  Objectives
+Early Termination on Generation:  147
+Best Energy:  0.697836663217
+hyper volume 0.999591836735
+Running GA for : DTLZ3  for 10  Decisions and 4  Objectives
+Early Termination on Generation:  309
+Best Energy:  0.265441395179
+hyper volume 0.999805825243
+........................................................................................
+Mean Hyper Volume for 5 runs: 0.999281658724
+Standard Deviation for Hyper Volume in 5 runs: 0.00052798912672
+#########################################################################################
+Running GA for : DTLZ3  for 10  Decisions and 6  Objectives
+Early Termination on Generation:  117
+Best Energy:  3.73990095686
+hyper volume 0.999401709402
+Running GA for : DTLZ3  for 10  Decisions and 6  Objectives
+Early Termination on Generation:  171
+Best Energy:  2.67904137634
+hyper volume 0.998771929825
+Running GA for : DTLZ3  for 10  Decisions and 6  Objectives
+Early Termination on Generation:  249
+Best Energy:  0.349458336998
+hyper volume 0.999759036145
+Running GA for : DTLZ3  for 10  Decisions and 6  Objectives
+Early Termination on Generation:  111
+Best Energy:  3.82982934361
+hyper volume 0.999369369369
+Running GA for : DTLZ3  for 10  Decisions and 6  Objectives
+Early Termination on Generation:  171
+Best Energy:  1.19856431241
+hyper volume 0.999649122807
+........................................................................................
+Mean Hyper Volume for 5 runs: 0.999390233509
+Standard Deviation for Hyper Volume in 5 runs: 0.000342317252637
+#########################################################################################
+Running GA for : DTLZ3  for 10  Decisions and 8  Objectives
+Early Termination on Generation:  117
+Best Energy:  2.71332348469
+hyper volume 0.99905982906
+Running GA for : DTLZ3  for 10  Decisions and 8  Objectives
+Early Termination on Generation:  123
+Best Energy:  2.14797936816
+hyper volume 0.999512195122
+Running GA for : DTLZ3  for 10  Decisions and 8  Objectives
+Early Termination on Generation:  117
+Best Energy:  2.35771640957
+hyper volume 0.999572649573
+Running GA for : DTLZ3  for 10  Decisions and 8  Objectives
+Early Termination on Generation:  165
+Best Energy:  4.93937930211
+hyper volume 0.999090909091
+Running GA for : DTLZ3  for 10  Decisions and 8  Objectives
+Early Termination on Generation:  129
+Best Energy:  1.74677930456
+hyper volume 0.999457364341
+........................................................................................
+Mean Hyper Volume for 5 runs: 0.999338589437
+Standard Deviation for Hyper Volume in 5 runs: 0.000218212493001
+#########################################################################################
+Running GA for : DTLZ3  for 20  Decisions and 2  Objectives
+Early Termination on Generation:  171
+Best Energy:  4.39232660728
+hyper volume 0.999122807018
+Running GA for : DTLZ3  for 20  Decisions and 2  Objectives
+Early Termination on Generation:  213
+Best Energy:  0.5482658956
+hyper volume 0.999530516432
+Running GA for : DTLZ3  for 20  Decisions and 2  Objectives
+Early Termination on Generation:  111
+Best Energy:  2.76816441517
+hyper volume 0.999369369369
+Running GA for : DTLZ3  for 20  Decisions and 2  Objectives
+Early Termination on Generation:  135
+Best Energy:  0.802433219158
+hyper volume 0.999407407407
+Running GA for : DTLZ3  for 20  Decisions and 2  Objectives
+Early Termination on Generation:  147
+Best Energy:  0.0106314954459
+hyper volume 0.99925170068
+........................................................................................
+Mean Hyper Volume for 5 runs: 0.999336360181
+Standard Deviation for Hyper Volume in 5 runs: 0.000139000826872
+#########################################################################################
+Running GA for : DTLZ3  for 20  Decisions and 4  Objectives
+Early Termination on Generation:  117
+Best Energy:  5.83074209517
+hyper volume 0.999316239316
+Running GA for : DTLZ3  for 20  Decisions and 4  Objectives
+Early Termination on Generation:  111
+Best Energy:  4.38748136625
+hyper volume 0.998738738739
+Running GA for : DTLZ3  for 20  Decisions and 4  Objectives
+Early Termination on Generation:  147
+Best Energy:  0.392655772465
+hyper volume 0.999591836735
+Running GA for : DTLZ3  for 20  Decisions and 4  Objectives
+Early Termination on Generation:  141
+Best Energy:  1.87402036981
+hyper volume 0.999361702128
+Running GA for : DTLZ3  for 20  Decisions and 4  Objectives
+Early Termination on Generation:  147
+Best Energy:  0.878487574316
+hyper volume 0.999455782313
+........................................................................................
+Mean Hyper Volume for 5 runs: 0.999292859846
+Standard Deviation for Hyper Volume in 5 runs: 0.000292666011381
+#########################################################################################
+Running GA for : DTLZ3  for 20  Decisions and 6  Objectives
+Early Termination on Generation:  123
+Best Energy:  0.222991783123
+hyper volume 0.998292682927
+Running GA for : DTLZ3  for 20  Decisions and 6  Objectives
+Early Termination on Generation:  117
+Best Energy:  1.22395846521
+hyper volume 0.999487179487
+Running GA for : DTLZ3  for 20  Decisions and 6  Objectives
+Early Termination on Generation:  141
+Best Energy:  6.00394967961
+hyper volume 0.999503546099
+Running GA for : DTLZ3  for 20  Decisions and 6  Objectives
+Early Termination on Generation:  165
+Best Energy:  2.79982318147
+hyper volume 0.999636363636
+Running GA for : DTLZ3  for 20  Decisions and 6  Objectives
+Early Termination on Generation:  213
+Best Energy:  0.630538444912
+hyper volume 0.999718309859
+........................................................................................
+Mean Hyper Volume for 5 runs: 0.999327616402
+Standard Deviation for Hyper Volume in 5 runs: 0.000524493120405
+#########################################################################################
+Running GA for : DTLZ3  for 20  Decisions and 8  Objectives
+Early Termination on Generation:  201
+Best Energy:  0.577033618658
+hyper volume 0.997512437811
+Running GA for : DTLZ3  for 20  Decisions and 8  Objectives
+Early Termination on Generation:  129
+Best Energy:  3.75925406187
+hyper volume 0.998914728682
+Running GA for : DTLZ3  for 20  Decisions and 8  Objectives
+Early Termination on Generation:  183
+Best Energy:  0.10207112257
+hyper volume 0.999180327869
+Running GA for : DTLZ3  for 20  Decisions and 8  Objectives
+Early Termination on Generation:  111
+Best Energy:  1.48942609642
+hyper volume 0.999459459459
+Running GA for : DTLZ3  for 20  Decisions and 8  Objectives
+Early Termination on Generation:  117
+Best Energy:  2.3396469317
+hyper volume 0.999145299145
+........................................................................................
+Mean Hyper Volume for 5 runs: 0.998842450593
+Standard Deviation for Hyper Volume in 5 runs: 0.000687129734921
+#########################################################################################
+Running GA for : DTLZ3  for 40  Decisions and 2  Objectives
+Early Termination on Generation:  165
+Best Energy:  2.3430140048
+hyper volume 0.999636363636
+Running GA for : DTLZ3  for 40  Decisions and 2  Objectives
+Early Termination on Generation:  207
+Best Energy:  0.697418046152
+hyper volume 0.997584541063
+Running GA for : DTLZ3  for 40  Decisions and 2  Objectives
+Early Termination on Generation:  129
+Best Energy:  0.0129579017366
+hyper volume 0.998527131783
+Running GA for : DTLZ3  for 40  Decisions and 2  Objectives
+Early Termination on Generation:  141
+Best Energy:  0.295930648796
+hyper volume 0.999645390071
+Running GA for : DTLZ3  for 40  Decisions and 2  Objectives
+Early Termination on Generation:  189
+Best Energy:  2.09688222419
+hyper volume 0.999682539683
+........................................................................................
+Mean Hyper Volume for 5 runs: 0.999015193247
+Standard Deviation for Hyper Volume in 5 runs: 0.000838250752386
+#########################################################################################
+Running GA for : DTLZ3  for 40  Decisions and 4  Objectives
+Early Termination on Generation:  153
+Best Energy:  8.83492802071
+hyper volume 0.999477124183
+Running GA for : DTLZ3  for 40  Decisions and 4  Objectives
+Early Termination on Generation:  189
+Best Energy:  4.71271765209
+hyper volume 0.999365079365
+Running GA for : DTLZ3  for 40  Decisions and 4  Objectives
+Early Termination on Generation:  171
+Best Energy:  0.643799856422
+hyper volume 0.998362573099
+Running GA for : DTLZ3  for 40  Decisions and 4  Objectives
+Early Termination on Generation:  117
+Best Energy:  3.67883923143
+hyper volume 0.998803418803
+Running GA for : DTLZ3  for 40  Decisions and 4  Objectives
+Early Termination on Generation:  153
+Best Energy:  2.52438307778
+hyper volume 0.998823529412
+........................................................................................
+Mean Hyper Volume for 5 runs: 0.998966344973
+Standard Deviation for Hyper Volume in 5 runs: 0.000407766161764
+#########################################################################################
+Running GA for : DTLZ3  for 40  Decisions and 6  Objectives
+Early Termination on Generation:  129
+Best Energy:  1.42584372888
+hyper volume 0.999147286822
+Running GA for : DTLZ3  for 40  Decisions and 6  Objectives
+Early Termination on Generation:  129
+Best Energy:  15.9430964977
+hyper volume 0.999457364341
+Running GA for : DTLZ3  for 40  Decisions and 6  Objectives
+Early Termination on Generation:  153
+Best Energy:  2.42630056717
+hyper volume 0.999150326797
+Running GA for : DTLZ3  for 40  Decisions and 6  Objectives
+Early Termination on Generation:  117
+Best Energy:  4.54205175744
+hyper volume 0.999401709402
+Running GA for : DTLZ3  for 40  Decisions and 6  Objectives
+Early Termination on Generation:  129
+Best Energy:  14.9898202594
+hyper volume 0.999147286822
+........................................................................................
+Mean Hyper Volume for 5 runs: 0.999260794837
+Standard Deviation for Hyper Volume in 5 runs: 0.000138901268052
+#########################################################################################
+Running GA for : DTLZ3  for 40  Decisions and 8  Objectives
+Early Termination on Generation:  117
+Best Energy:  2.04607585641
+hyper volume 0.998888888889
+Running GA for : DTLZ3  for 40  Decisions and 8  Objectives
+Early Termination on Generation:  117
+Best Energy:  10.6252516432
+hyper volume 0.999316239316
+Running GA for : DTLZ3  for 40  Decisions and 8  Objectives
+Early Termination on Generation:  123
+Best Energy:  7.96983197239
+hyper volume 0.991869918699
+Running GA for : DTLZ3  for 40  Decisions and 8  Objectives
+Early Termination on Generation:  111
+Best Energy:  1.39367554611
+hyper volume 0.999369369369
+Running GA for : DTLZ3  for 40  Decisions and 8  Objectives
+Early Termination on Generation:  195
+Best Energy:  0.292656237238
+hyper volume 0.999692307692
+........................................................................................
+Mean Hyper Volume for 5 runs: 0.997827344793
+Standard Deviation for Hyper Volume in 5 runs: 0.00298966669855
+Total Time Elapsed(in minutes):  5.9659520189
