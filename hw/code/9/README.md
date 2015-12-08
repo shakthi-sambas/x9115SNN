@@ -1,4 +1,4 @@
-##TITLE
+## Genetic Algorithm to Optimize DTLZ Model
 
 ###I. Abstract
 The Prime Objective of this Project is to optimize DTLZ models (DTZ1 , DTZ3 ,DTZ5 ,DTZ7) using GA algorithm. During optimization our goal  is to identify best decision for the desired objectives.  
