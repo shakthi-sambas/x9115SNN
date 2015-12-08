@@ -34,6 +34,6 @@ Differential Evolution is a Stochastic Direct Search and Global Optimization alg
   
 [1] https://en.wikipedia.org/wiki/Simulated_annealing
 
-[2] Clever Algorithms - Jason Brownlee
+[2] http://www.cleveralgorithms.com/nature-inspired/evolution/genetic_algorithm.html
 
 [3] http://en.wikipedia.org/wiki/Differential_evolution
