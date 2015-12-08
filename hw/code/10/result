@@ -5,7 +5,7 @@ Early Termination on Generation 141
 Calculating HyperVolume...
 Hyper Volume: 0.998959810875
 .................................................................................................................
-Exploring  0 / 10 on the frontier
+Exploring  1 / 10 on the frontier
 .................................................................................................................
 Running GA for parameters:
      Population: 75  || Mutation Rate: 0.0347941200133  || Crossover probability: 0.774768250889
@@ -21,7 +21,7 @@ Hyper Volume: 0.999234122776
 Previous best: 0.998959810875
 Parameter Values [Population Size, Mutation Rate, Crossover Probability]: [75, 0.03479412001331572, 0.7747682508890176]
 .................................................................................................................
-Exploring  1 / 10 on the frontier
+Exploring  2 / 10 on the frontier
 .................................................................................................................
 Running GA for parameters:
      Population: 119  || Mutation Rate: 0.0766755185675  || Crossover probability: 0.966084776646
@@ -35,7 +35,7 @@ Early Termination on Generation 267
 Calculating HyperVolume...
 Hyper Volume: 0.996254681648
 .................................................................................................................
-Exploring  2 / 10 on the frontier
+Exploring  3 / 10 on the frontier
 .................................................................................................................
 Running GA for parameters:
      Population: 108  || Mutation Rate: 0.0271411062528  || Crossover probability: 0.937044205506
@@ -49,7 +49,7 @@ Early Termination on Generation 111
 Calculating HyperVolume...
 Hyper Volume: 0.997525694709
 .................................................................................................................
-Exploring  3 / 10 on the frontier
+Exploring  4 / 10 on the frontier
 .................................................................................................................
 Running GA for parameters:
      Population: 57  || Mutation Rate: 0.0831500716839  || Crossover probability: 0.949189180264
@@ -63,7 +63,7 @@ Early Termination on Generation 111
 Calculating HyperVolume...
 Hyper Volume: 0.999283374283
 .................................................................................................................
-Exploring  4 / 10 on the frontier
+Exploring  5 / 10 on the frontier
 .................................................................................................................
 Running GA for parameters:
      Population: 138  || Mutation Rate: 0.0196817595671  || Crossover probability: 0.946903418642
@@ -79,7 +79,7 @@ Hyper Volume: 0.999735743354
 Previous best: 0.999399399399
 Parameter Values [Population Size, Mutation Rate, Crossover Probability]: [138, 0.019681759567117756, 0.9469034186424417]
 .................................................................................................................
-Exploring  5 / 10 on the frontier
+Exploring  6 / 10 on the frontier
 .................................................................................................................
 Running GA for parameters:
      Population: 106  || Mutation Rate: 0.0102455509465  || Crossover probability: 0.984431597358
@@ -93,7 +93,7 @@ Early Termination on Generation 117
 Calculating HyperVolume...
 Hyper Volume: 0.999353587589
 .................................................................................................................
-Exploring  6 / 10 on the frontier
+Exploring  7 / 10 on the frontier
 .................................................................................................................
 Running GA for parameters:
      Population: 118  || Mutation Rate: 0.0511696091968  || Crossover probability: 0.832870194538
@@ -107,7 +107,7 @@ Early Termination on Generation 267
 Calculating HyperVolume...
 Hyper Volume: 0.998237497246
 .................................................................................................................
-Exploring  7 / 10 on the frontier
+Exploring  8 / 10 on the frontier
 .................................................................................................................
 Running GA for parameters:
      Population: 88  || Mutation Rate: 0.0590543548067  || Crossover probability: 0.913885376707
@@ -121,7 +121,7 @@ Early Termination on Generation 249
 Calculating HyperVolume...
 Hyper Volume: 0.999726177437
 .................................................................................................................
-Exploring  8 / 10 on the frontier
+Exploring  9 / 10 on the frontier
 .................................................................................................................
 Running GA for parameters:
      Population: 88  || Mutation Rate: 0.0689554341543  || Crossover probability: 0.633745754925
@@ -137,7 +137,7 @@ Hyper Volume: 0.999747474747
 Previous best: 0.999735743354
 Parameter Values [Population Size, Mutation Rate, Crossover Probability]: [88, 0.06895543415426163, 0.6337457549247619]
 .................................................................................................................
-Exploring  9 / 10 on the frontier
+Exploring  10 / 10 on the frontier
 .................................................................................................................
 Running GA for parameters:
      Population: 107  || Mutation Rate: 0.0710850593607  || Crossover probability: 0.867830006938
