@@ -14,7 +14,6 @@ Type2 operator is used to compare two sets of eras (list of candidate solutions)
 
 Type 3 operator compares sets of candidate solutions from different optimizers. The operator is run once at the end of running all optimizers to get optimizers in a ranked order. A new baseline population is used for running each optimizer and each optimizer is run multiple times to get a more confident measure. If we run the optimizer enough number of times, we can see if certain optimizers perform better than the others on a continuous basis. For this assignment, we use Scott-Knott Statistic Chart to display ranking of the optimizers.
 
-
 ###III. Optimizers
   
 ####Simulated Annealing:
@@ -28,7 +27,6 @@ MaxWalkSat  non parametric stochastic search algorithm that samples the landscap
 ####Differential Evolution:
 Differential Evolution is a Stochastic Direct Search and Global Optimization algorithm, and is a type of an Evolutionary Algorithm from the field of Evolutionary Computation. Differential Evolution algorithm involves maintaining a population of candidate solutions subjected to iterations of recombination, evaluation, and selection. The recombination part involves combining existing candidate solutions according to its simple formulae, and then keeping whichever candidate solution has the best score or fitness on the optimization problem at hand. In this way the optimization problem is treated as a black box that merely provides a measure of quality given a candidate solution and the gradient is therefore not needed.  
   
-  
 ###IV. Description
 
 In this assignment, we use the code developed in previous assignments for optimizers. We add a model for DTLZ7 to the codebase. We also use the Continuous Dominating Type1 operator, as described above, to compare dominance of individual solutions. The choice of continuous domination over boolean domination comes for the fact that the later works well for lower number of objective functions. DTLZ7 function can take multiple objective functions and decision values. We wanted our code to work well with any combination of these values. If it was for the use of just this assignment, we could have used Binary Domination as here we use a variant of DTLZ7 with 10 decisions and 2 objectives. The same Type1 operator is used across all optimizers to save coding effort.
@@ -36,12 +34,14 @@ The algorithm begins with a loop running with a termination condition. A new can
   
 ###V. Threats to Validity
 
-
 All the optimizer used in this assignment use heuristics to find an optimal solution. This is done through exploration and exploitation of the landscape. Exploration refers to jumping to new areas to find new solutions and exploitation refers to exploring areas around an available solution in hope to find better solutions. These two ideas help escape the local maxima and minima on the landscape but need to be used wisely to make the algorithm perform better. So depending on how and to what extent these approaches are used, the outcome can be different. Also, as mentioned the optimizer used in this assignment use heuristics, so do not guarantee an optimal solution but the tradeoff between ease of use and reduced complexity and high probability of getting a solution very close to the optimal one makes them very useful in real world scenarios.
   
 ###VI. Results
 
 The results as given by the Scott Knott charting function are included below in the screenshot. As is clear from the analysis, Differential Evolution performs better than MaxWalkSat and Simulated Annealing consistently. MaxWalkSat and Simulated Annealing perform very similar to each other with Simulated Annealing being a little better. The entire output of the algorithms is included in the file named “[result](result)”. 
+
+<img src="/imgs/code8_1.png">
+<img src="/imgs/code8_2.png">
 
 ###VIII. References
   
