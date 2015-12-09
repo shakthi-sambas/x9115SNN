@@ -69,4 +69,11 @@ http://www.cleveralgorithms.com/nature-inspired/evolution/genetic_algorithm.html
 
 https://www.youtube.com/watch?v=zwYV11a__HQ
 
+#####COLLABORATORS
+
+######Sakthi Sambasivam (ssambas)
+
+######Nitin Sharma (nsharm10)
+
+######Nakul Shukla (nshukla)
 
