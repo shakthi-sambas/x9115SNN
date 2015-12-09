@@ -50,3 +50,14 @@ The results as given by the Scott Knott charting function are included below in 
 [2] http://www.cleveralgorithms.com/nature-inspired/evolution/genetic_algorithm.html
 
 [3] http://en.wikipedia.org/wiki/Differential_evolution
+
+  
+  
+
+#####COLLABORATORS
+
+######Sakthi Sambasivam (ssambas)
+
+######Nitin Sharma (nsharm10)
+
+######Nakul Shukla (nshukla)
