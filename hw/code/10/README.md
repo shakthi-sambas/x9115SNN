@@ -66,3 +66,11 @@ Boolean domination has its own drawbacks. In future works we plan on implementin
 [1] http://www.mathworks.com/discovery/genetic-algorithm.html
 
 http://en.wikipedia.org/wiki/Differential_evolution
+
+#####COLLABORATORS
+
+######Sakthi Sambasivam (ssambas)
+
+######Nitin Sharma (nsharm10)
+
+######Nakul Shukla (nshukla)
